@@ -45,14 +45,19 @@
     <link href="https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
     <id>https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T14:51:42.032Z</updated>
+    <updated>2021-06-11T15:35:21.353Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步</summary>
+    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;p&gt;教程比较多，自行搜索&lt;/p&gt;
+&lt;p&gt;个人安装的：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;UE4版</summary>
       
     
     
@@ -69,14 +74,14 @@
     <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/"/>
     <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T10:28:04.432Z</updated>
+    <updated>2021-06-11T15:36:08.184Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-安装记录"><a href="#Hexo-安装记录" class="headerlink" title="Hexo 安装记录"></a>Hexo 安装记录</h1><p>[] (<a href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a>)</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-安装记录"><a href="#Hexo-安装记录" class="headerlink" title="Hexo 安装记录"></a>Hexo 安装记录</h1><p>[地址文档] (<a href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a>)</p><h3 id="markdown-图片测试问题"><a href="#markdown-图片测试问题" class="headerlink" title="markdown 图片测试问题"></a>markdown 图片测试问题</h3><blockquote><p>在写.md文档时，采用在source 目录下新建个images文件夹。引用图片直接 (/images/图片名)</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Hexo-安装记录&quot;&gt;&lt;a href=&quot;#Hexo-安装记录&quot; class=&quot;headerlink&quot; title=&quot;Hexo 安装记录&quot;&gt;&lt;/a&gt;Hexo 安装记录&lt;/h1&gt;&lt;p&gt;[] (&lt;a href=&quot;https://hexo.io/zh-cn&quot;&gt;https:</summary>
+    <summary type="html">&lt;h1 id=&quot;Hexo-安装记录&quot;&gt;&lt;a href=&quot;#Hexo-安装记录&quot; class=&quot;headerlink&quot; title=&quot;Hexo 安装记录&quot;&gt;&lt;/a&gt;Hexo 安装记录&lt;/h1&gt;&lt;p&gt;[地址文档] (&lt;a href=&quot;https://hexo.io/zh-cn&quot;&gt;ht</summary>
       
     
     
