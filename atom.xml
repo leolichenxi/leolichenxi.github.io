@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>1.UE4-安装-Rider for Unreal Engine</title>
+    <link href="https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
+    <id>https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
+    <published>2021-06-11T05:43:00.000Z</published>
+    <updated>2021-06-11T14:51:42.032Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步</summary>
+      
+    
+    
+    
+    <category term="UE4" scheme="https://leolichenxi.github.io/categories/UE4/"/>
+    
+    
+    <category term="UE4" scheme="https://leolichenxi.github.io/tags/UE4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo使用记录</title>
     <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/"/>
     <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/</id>
@@ -82,18 +106,19 @@
   </entry>
   
   <entry>
-    <title>1.UE4-安装-Rider for Unreal Engine</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
+    <title>3.UE4-FString</title>
+    <link href="https://leolichenxi.github.io/2021/06/11/UE4/3.UE4-FString/"/>
+    <id>https://leolichenxi.github.io/2021/06/11/UE4/3.UE4-FString/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T14:42:08.189Z</updated>
+    <updated>2021-06-11T07:47:10.191Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h1><blockquote><p><a href="https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html">https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html</a></p></blockquote><ol><li>FName 不区分大小写</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FString str = FString(&quot;11111&quot;);</span><br><span class="line">FString str1 = FString::FromInt(1000);</span><br><span class="line">std::string s = std::to_string(12.0);</span><br><span class="line">FString str2 = FString(s.c_str());</span><br><span class="line">FString str3 = &quot;11111&quot;;</span><br><span class="line">FString str4 = TEXT(&quot;11111&quot;);</span><br><span class="line">FString str5 = FString::Printf(TEXT(&quot;TEXT%hs&quot;),&quot;1111&quot;);</span><br><span class="line">FString str6 = FString::Printf(TEXT(&quot;TEXT%d&quot;),1111);</span><br><span class="line">FString str7 = FString::Printf(TEXT(&quot;TEXT%f&quot;),1111.0f);</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步</summary>
+    <summary type="html">&lt;h1 id=&quot;字符串处理&quot;&gt;&lt;a href=&quot;#字符串处理&quot; class=&quot;headerlink&quot; title=&quot;字符串处理&quot;&gt;&lt;/a&gt;字符串处理&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.unrealengine.com/zh-CN/</summary>
       
     
     
@@ -118,31 +143,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;新建工程&quot;&gt;&lt;a href=&quot;#新建工程&quot; class=&quot;headerlink&quot; title=&quot;新建工程&quot;&gt;&lt;/a&gt;新建工程&lt;/h1&gt;&lt;h2 id=&quot;NOTE-PROJECT&quot;&gt;&lt;a href=&quot;#NOTE-PROJECT&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/categories/UE4/"/>
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/tags/UE4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3.UE4-FString</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/UE4/3.UE4-FString/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/UE4/3.UE4-FString/</id>
-    <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T07:47:10.191Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h1><blockquote><p><a href="https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html">https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html</a></p></blockquote><ol><li>FName 不区分大小写</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FString str = FString(&quot;11111&quot;);</span><br><span class="line">FString str1 = FString::FromInt(1000);</span><br><span class="line">std::string s = std::to_string(12.0);</span><br><span class="line">FString str2 = FString(s.c_str());</span><br><span class="line">FString str3 = &quot;11111&quot;;</span><br><span class="line">FString str4 = TEXT(&quot;11111&quot;);</span><br><span class="line">FString str5 = FString::Printf(TEXT(&quot;TEXT%hs&quot;),&quot;1111&quot;);</span><br><span class="line">FString str6 = FString::Printf(TEXT(&quot;TEXT%d&quot;),1111);</span><br><span class="line">FString str7 = FString::Printf(TEXT(&quot;TEXT%f&quot;),1111.0f);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;字符串处理&quot;&gt;&lt;a href=&quot;#字符串处理&quot; class=&quot;headerlink&quot; title=&quot;字符串处理&quot;&gt;&lt;/a&gt;字符串处理&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.unrealengine.com/zh-CN/</summary>
       
     
     
