@@ -25,7 +25,7 @@
 <meta property="og:description" content="Pure 设置记录文档地址 背景动态设置背景动画 基于canvas，在\themes\pure\layout\layout.ejs的body中面添加 123&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;canvas-nest.js&#x2F;1.0.0&#x2F;canvas-nest.min.js&quot;&gt;&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-11T05:43:00.000Z">
-<meta property="article:modified_time" content="2021-06-11T09:11:29.497Z">
+<meta property="article:modified_time" content="2021-06-11T09:14:06.492Z">
 <meta property="article:author" content="李晨曦">
 <meta property="article:tag" content="pure">
 <meta name="twitter:card" content="summary">
@@ -310,7 +310,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pure-%E8%AE%BE%E7%BD%AE%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">Pure 设置记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.1.</span> <span class="toc-text">背景动态设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitcommet-%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.2.</span> <span class="toc-text">gitcommet 设置</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pure-%E8%AE%BE%E7%BD%AE%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">Pure 设置记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.1.</span> <span class="toc-text">背景动态设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitcommet-%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.2.</span> <span class="toc-text">gitcommet 设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.3.</span> <span class="toc-text">访问数设置</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -382,6 +382,10 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="gitcommet-设置"><a href="#gitcommet-设置" class="headerlink" title="gitcommet 设置"></a>gitcommet 设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  type: gitment  # 启用哪种评论系统</span><br><span class="line">  # disqus:  # enter disqus shortname here</span><br><span class="line">  # youyan: </span><br><span class="line">  #   uid: 2kLH6P3hQG2bNQQ9a9mwRFmd-gzGzoHsz # enter youyan uid </span><br><span class="line">  # livere:</span><br><span class="line">  #   uid: # enter youyan uid </span><br><span class="line">  gitment:</span><br><span class="line">    githubID: githubname</span><br><span class="line">    repo: githubname.github.io</span><br><span class="line">    ClientID: id</span><br><span class="line">    ClientSecret: secrectid</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="访问数设置"><a href="#访问数设置" class="headerlink" title="访问数设置"></a>访问数设置</h3><p>footer.ejs脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class=&quot;footer&quot; itemscope itemtype=&quot;http://schema.org/WPFooter&quot;&gt;</span><br><span class="line">	&lt;%- partial(&#x27;_common/social&#x27;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">    &lt;div class=&quot;copyright&quot;&gt;</span><br><span class="line">    	&lt;% if(theme.site.copyright) &#123; %&gt;</span><br><span class="line">        &amp;copy; &lt;%= date(new Date(), &#x27;YYYY&#x27;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;span &gt;本站总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
