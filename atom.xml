@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CXGame</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-05-07T08:35:36.933Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>李晨曦</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/CPlusPlus/2_basic/"/>
+    <id>http://example.com/2021/06/11/CPlusPlus/2_basic/</id>
+    <published>2021-06-11T06:38:14.853Z</published>
+    <updated>2021-05-07T08:35:36.933Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 C++ 中，有两种简单的定义常量的方式：</p><ul><li>使用#define 预处理器</li><li>使用const 关键字</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在 C++ 中，有两种简单的定义常量的方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用#define 预处理器&lt;/li&gt;
+&lt;li&gt;使用const 关键字&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/CPlusPlus/1_introduce/"/>
+    <id>http://example.com/2021/06/11/CPlusPlus/1_introduce/</id>
+    <published>2021-06-11T06:38:14.846Z</published>
+    <updated>2021-05-07T07:58:23.868Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote><p>c++是一种静态类型的、编译的、通用的、大小写敏感的、不规则的编程语言</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;c++是一种静态类型的、编译的、通用的、大小写敏感的、不规则的编程语言&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/UE4/3.UE4-FString/"/>
+    <id>http://example.com/2021/06/11/UE4/3.UE4-FString/</id>
+    <published>2021-06-11T06:37:09.423Z</published>
+    <updated>2021-05-20T10:02:22.953Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><blockquote><p><a href="https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html">https://docs.unrealengine.com/zh-CN/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/index.html</a></p></blockquote><ol><li>FName 不区分大小写</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FString str = FString(&quot;11111&quot;);</span><br><span class="line">FString str1 = FString::FromInt(1000);</span><br><span class="line">std::string s = std::to_string(12.0);</span><br><span class="line">FString str2 = FString(s.c_str());</span><br><span class="line">FString str3 = &quot;11111&quot;;</span><br><span class="line">FString str4 = TEXT(&quot;11111&quot;);</span><br><span class="line">FString str5 = FString::Printf(TEXT(&quot;TEXT%hs&quot;),&quot;1111&quot;);</span><br><span class="line">FString str6 = FString::Printf(TEXT(&quot;TEXT%d&quot;),1111);</span><br><span class="line">FString str7 = FString::Printf(TEXT(&quot;TEXT%f&quot;),1111.0f);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;字符串处理&quot;&gt;&lt;a href=&quot;#字符串处理&quot; class=&quot;headerlink&quot; title=&quot;字符串处理&quot;&gt;&lt;/a&gt;字符串处理&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.unrealengine.com/zh-CN/</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/UE4/2.UE4-%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://example.com/2021/06/11/UE4/2.UE4-%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/</id>
+    <published>2021-06-11T06:37:09.413Z</published>
+    <updated>2021-05-20T06:49:16.571Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h3><h4 id="NOTE-PROJECT"><a href="#NOTE-PROJECT" class="headerlink" title="NOTE_PROJECT"></a>NOTE_PROJECT</h4><p><a href="https://ue4community.wiki/logging-lgpidy6i">https://ue4community.wiki/logging-lgpidy6i</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   UE_LOG(LogTemp,Log,TEXT(&quot;1111111111Warning&quot;))</span><br><span class="line">UE_LOG(LogTemp,Warning,TEXT(&quot;1111111111Warning&quot;))</span><br><span class="line">UE_LOG(LogTemp,Error,TEXT(&quot;1111111111Warning&quot;))</span><br><span class="line">UE_LOG(CustomLog,Error,TEXT(&quot;1111111111Warning&quot;))</span><br><span class="line"></span><br><span class="line">GEngine-&gt; AddOnScreenDebugMessage(-1,1,FColor::Red,&quot;AddOnScreenDebugMessage&quot;);</span><br><span class="line"></span><br><span class="line">LOG_SCREEN(&quot;LOG_SCREEN&quot;) </span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="自定义："><a href="#自定义：" class="headerlink" title="自定义："></a>自定义：</h3><ol><li><p>在.h文件中<br>DECLARE_LOG_CATEGORY_EXTERN(CustomLog, Log, All);<br>在.cpp文件中<br>DEFINE_LOG_CATEGORY(CustomLog);</p></li><li><p>定义#define LOG_SCREEN(text) if(GEngine) GEngine-&gt; AddOnScreenDebugMessage(-1,1,FColor::Red,text);</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;新建工程&quot;&gt;&lt;a href=&quot;#新建工程&quot; class=&quot;headerlink&quot; title=&quot;新建工程&quot;&gt;&lt;/a&gt;新建工程&lt;/h3&gt;&lt;h4 id=&quot;NOTE-PROJECT&quot;&gt;&lt;a href=&quot;#NOTE-PROJECT&quot; class=&quot;headerlink&quot; </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/UE4/0.UE4-%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2021/06/11/UE4/0.UE4-%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-06-11T06:37:09.403Z</published>
+    <updated>2021-05-20T08:06:53.989Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
+    <id>http://example.com/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
+    <published>2021-06-11T06:37:09.403Z</published>
+    <updated>2021-05-21T02:36:06.492Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="./png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="./png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="./png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo使用记录</title>
+    <link href="http://example.com/2021/06/11/%E6%B5%8B%E8%AF%95hexo/"/>
+    <id>http://example.com/2021/06/11/%E6%B5%8B%E8%AF%95hexo/</id>
+    <published>2021-06-11T05:43:00.000Z</published>
+    <updated>2021-06-11T05:54:03.537Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-安装记录"><a href="#Hexo-安装记录" class="headerlink" title="Hexo 安装记录"></a>Hexo 安装记录</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexo-安装记录&quot;&gt;&lt;a href=&quot;#Hexo-安装记录&quot; class=&quot;headerlink&quot; title=&quot;Hexo 安装记录&quot;&gt;&lt;/a&gt;Hexo 安装记录&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="http://example.com/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
