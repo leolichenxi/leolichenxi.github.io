@@ -91,11 +91,35 @@
   </entry>
   
   <entry>
-    <title>Hexo使用记录</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/Hexo%E4%BD%BF%E7%94%A8/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/Hexo%E4%BD%BF%E7%94%A8/</id>
+    <title>Hexo Pure主题设置记录</title>
+    <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T07:26:54.845Z</updated>
+    <updated>2021-06-11T07:40:02.121Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Pure-设置记录"><a href="#Pure-设置记录" class="headerlink" title="Pure 设置记录"></a>Pure 设置记录</h1><h3 id="背景动态设置"><a href="#背景动态设置" class="headerlink" title="背景动态设置"></a>背景动态设置</h3><p><a href="https://link.csdn.net/?target=https://github.com/hustcc/canvas-nest.js">背景动画</a> 基于canvas，在\themes\pure\layout\layout.ejs的body中面添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Pure-设置记录&quot;&gt;&lt;a href=&quot;#Pure-设置记录&quot; class=&quot;headerlink&quot; title=&quot;Pure 设置记录&quot;&gt;&lt;/a&gt;Pure 设置记录&lt;/h1&gt;&lt;h3 id=&quot;背景动态设置&quot;&gt;&lt;a href=&quot;#背景动态设置&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://leolichenxi.github.io/categories/Hexo/"/>
+    
+    
+    <category term="pure" scheme="https://leolichenxi.github.io/tags/pure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo使用记录</title>
+    <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/"/>
+    <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/</id>
+    <published>2021-06-11T05:43:00.000Z</published>
+    <updated>2021-06-11T07:36:04.717Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Hexo-安装记录"><a href="#Hexo-安装记录" class="headerlink" title="Hexo 安装记录"></a>Hexo 安装记录</h1><p>[] (<a href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a>)</p>]]></content>
     
