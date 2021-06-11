@@ -86,7 +86,7 @@
     <link href="https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
     <id>https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T11:32:29.907Z</updated>
+    <updated>2021-06-11T14:42:08.189Z</updated>
     
     <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
     
