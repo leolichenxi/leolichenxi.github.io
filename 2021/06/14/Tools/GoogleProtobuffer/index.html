@@ -16,16 +16,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: hexo | 李晨曦</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CXGame">
-<meta property="og:url" content="https://leolichenxi.github.io/tags/hexo/index.html">
+  <title>GoogleProtobuffer | 李晨曦</title>
+  <meta name="description" content="Protocolbuffers 官方git地址 官方文档地址 官方Release 知乎介绍  Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，很适合做数据存储或 RPC 数据交换格式。它可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。 常见的数据格式：XML,Json,Protobuf,FlatBuffers 等其它。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoogleProtobuffer">
+<meta property="og:url" content="https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/index.html">
 <meta property="og:site_name" content="CXGame">
+<meta property="og:description" content="Protocolbuffers 官方git地址 官方文档地址 官方Release 知乎介绍  Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，很适合做数据存储或 RPC 数据交换格式。它可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。 常见的数据格式：XML,Json,Protobuf,FlatBuffers 等其它。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://leolichenxi.github.io/images/protobuffer/1.png">
+<meta property="article:published_time" content="2021-06-14T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-16T08:51:50.686Z">
 <meta property="article:author" content="李晨曦">
+<meta property="article:tag" content="GoogleProtobuffer">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://leolichenxi.github.io/images/protobuffer/1.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://leolichenxi.github.io/tags/hexo/index.html">
+  <link rel="canonical" href="https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/index.html">
   
     <link rel="alternate" href="/atom.xml" title="CXGame" type="application/atom+xml">
   
@@ -39,6 +46,8 @@
 
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
   <script data-ad-client="ca-pub-8216597248911463" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -324,61 +333,240 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: hexo</h1>
-      <p class="text-muted hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/pure/">pure</a></li>
-          
-          <li><a href="/tags/UE4/">UE4</a></li>
-          
-          <li><a href="/tags/hexo/">hexo</a></li>
-          
-          <li><a href="/tags/算法/">算法</a></li>
-          
-          <li><a href="/tags/Charp-Lua/">Charp Lua</a></li>
-          
-          <li><a href="/tags/GoogleProtobuffer/">GoogleProtobuffer</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
-        
-<div class="col-md-6">
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Protocolbuffers"><span class="toc-number">1.</span> <span class="toc-text">Protocolbuffers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDRelease-Protoc%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.</span> <span class="toc-text">下载Release Protoc代码生成工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">设置环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol-Buffer-%E7%BC%96%E7%A0%81%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">Protocol Buffer 编码原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Varint%E7%BC%96%E7%A0%81"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">Varint编码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.3.1.1.</span> <span class="toc-text">编码原理</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Tools/GoogleProtobuffer" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/">Hexo使用记录</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/hexo/" class="label label-default mb">hexo</a>
-     
-   </div>
-   
-</article>
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GoogleProtobuffer
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2021/06/14/Tools/GoogleProtobuffer/" class="article-date">
+	  <time datetime="2021-06-14T04:00:00.000Z" itemprop="datePublished">2021-06-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tools/">Tools</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link-link" href="/tags/GoogleProtobuffer/" rel="tag">GoogleProtobuffer</a>
+  </span>
 
 
-</div>
+        
+	<span class="article-read hidden-xs">
+	    <i class="fa fa-eye" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+	<span class="article-read hidden-xs">
+    	<i class="fa fa-eye" aria-hidden="true"></i>
+    	<span id="/2021/06/14/Tools/GoogleProtobuffer/" class="leancloud_visitors"  data-flag-title="GoogleProtobuffer">0</span>
+    </span>
+
+        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2021/06/14/Tools/GoogleProtobuffer/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 732(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
 
       </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h1 id="Protocolbuffers"><a href="#Protocolbuffers" class="headerlink" title="Protocolbuffers"></a>Protocolbuffers</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/protocolbuffers/protobuf">官方git地址</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.google.com/protocol-buffers">官方文档地址</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/protocolbuffers/protobuf/releases">官方Release</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38200420">知乎介绍</a></li>
+</ul>
+<p>Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，很适合做数据存储或 RPC 数据交换格式。它可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。</p>
+<p>常见的数据格式：XML,Json,Protobuf,FlatBuffers 等其它。</p>
+<ul>
+<li>数据储存</li>
+<li>数据交换格式</li>
+</ul>
+<p>使用流程：</p>
+<p>1.编写Scheme;<br>2.使用Protoc 生成代码；</p>
+<h2 id="下载Release-Protoc代码生成工具"><a href="#下载Release-Protoc代码生成工具" class="headerlink" title="下载Release Protoc代码生成工具"></a>下载Release Protoc代码生成工具</h2><blockquote>
+<p>Release中下载Window 或 Mac Os<br><img src="/images/protobuffer/1.png" alt="截图"></p>
+</blockquote>
+<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><p>在下载程序后，需要将下载 zip 文件中的 bin 目录设置到环境变量中。</p>
+<p>然后运行 protoc –version 来确定你的编译运行版本已经被正确配置。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><a target="_blank" rel="noopener" href="https://developers.google.com/protocol-buffers">官方文档地址</a></p>
+<p>生成代码命令</p>
+<blockquote>
+<p>eg:   protoc – csharp_out=SciptOutFolder/  ProtoFolder/filename.proto</p>
+</blockquote>
+<h3 id="Protocol-Buffer-编码原理"><a href="#Protocol-Buffer-编码原理" class="headerlink" title="Protocol Buffer 编码原理"></a>Protocol Buffer 编码原理</h3><p>采用Varint编码规则</p>
+<h4 id="Varint编码"><a href="#Varint编码" class="headerlink" title="Varint编码"></a>Varint编码</h4><p>variant是可变长的编码方式,Varint是一种使用一个或多个字节序列化整数的方法，会把整数编码变为长字节，对于32位整型进过Variant编码后需要1-5个字节,小的数字使用1个byte，大的数字使用5个bytes。64位整型数据编码后占用1~10个字节。在实际场景中小数字的使用率远远大于大数字，因此Varint编码对于大部分的场景都可以起到很好的压缩效果。</p>
+<h5 id="编码原理"><a href="#编码原理" class="headerlink" title="编码原理"></a>编码原理</h5><p>除了最后一个字节外,Varint编码中的每个字节都设置了最高有效位（most significant bit - msb）–msb为1则表明后面的字节还是属于当前数据的,如果是0那么这是当前数据的最后一个字节数据。每个字节的第7位用于以7位为一组存储数字的二进制补码表示，最低有效组在前，或者叫最低有效字节在前。这表明varint编码后数据的字节是按照小端序排列的。</p>
+<p>关于字节排列的方式引用一下维基百科上的词条</p>
+<blockquote>
+<p>字节的排列方式有两个通用规则。例如，一个多位的整数，按照存储地址从低到高排序的字节中，如果该整数的最低有效字节（类似于最低有效位）在最高有效字节的前面，则称小端序；反之则称大端序。在网络应用中，字节序是一个必须被考虑的因素，因为不同机器类型可能采用不同标准的字节序，所以均按照网络标准转化。</p>
+</blockquote>
+<p>通俗一点说就是：大端序是按照数字的书写顺序排列的，而小端序是颠倒书写顺序进行排列的。</p>
+<blockquote>
+<p>variant编码对负数编码效率低</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/" title="GoogleProtobuffer" target="_blank" rel="external">https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/leolichenxi" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/leolichenxi" target="_blank"><span class="text-dark">李晨曦</span><small class="ml-1x">Game Developer &amp; U3D,UE4</small></a></h3>
+        <div>Game Developer &amp; U3D,UE4</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+       
+
+
+    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%9B%E5%8F%89%E6%A0%91/" title="四叉树"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/" title="Hexo Pure主题设置记录">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+  </div>
+  
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
+            </div>
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -528,6 +716,28 @@ $(function() {
 </script>
 
     
+    
+        
+    
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: 'GoogleProtobuffer', 
+  owner: 'leolichenxi', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'leolichenxi.github.io',
+  oauth: {
+    client_id: 'c03e854f9bffe2bd61c6',
+    client_secret: 'f41ada16ace07ee2c4669395100e4e9668fe5193',
+  }
+})
+gitment.render('comments')
+</script>
+
+    
+
     
     
 

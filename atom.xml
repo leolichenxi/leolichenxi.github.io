@@ -6,7 +6,7 @@
   <link href="https://leolichenxi.github.io/atom.xml" rel="self"/>
   
   <link href="https://leolichenxi.github.io/"/>
-  <updated>2021-06-14T05:37:26.823Z</updated>
+  <updated>2021-06-17T06:28:53.352Z</updated>
   <id>https://leolichenxi.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSharpLua</title>
+    <link href="https://leolichenxi.github.io/2021/06/17/Tools/CSharp.lua/"/>
+    <id>https://leolichenxi.github.io/2021/06/17/Tools/CSharp.lua/</id>
+    <published>2021-06-17T04:00:00.000Z</published>
+    <updated>2021-06-17T06:28:53.352Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSharpLua"><a href="#CSharpLua" class="headerlink" title="CSharpLua"></a>CSharpLua</h1><p>一个翻译c#为Lua的工具<br>Git地址<a href="https://github.com/yanghuan/CSharp.lua.git">Charp.lua</a></p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">D:\&gt;dotnet CSharp.Lua.Launcher.dll -h</span><br><span class="line">Usage: CSharp.lua [-s srcfolder] [-d dstfolder]</span><br><span class="line">Arguments</span><br><span class="line">-s              : can be a directory where all cs files will be compiled, or a list of files, using &#x27;;&#x27; or &#x27;,&#x27; to separate</span><br><span class="line">-d              : destination directory, will put the out lua files</span><br><span class="line"></span><br><span class="line">Options</span><br><span class="line">-h              : show the help message and exit</span><br><span class="line">-l              : libraries referenced, use &#x27;;&#x27; to separate</span><br><span class="line">                  if the librarie is a module, whitch is compield by CSharp.lua with -module arguemnt, the last character needs to be &#x27;!&#x27; in order to mark  </span><br><span class="line"></span><br><span class="line">-m              : meta files, like System.xml, use &#x27;;&#x27; to separate</span><br><span class="line">-csc            : csc.exe command argumnets, use &#x27; &#x27; or &#x27;\t&#x27; to separate</span><br><span class="line"></span><br><span class="line">-c              : support classic lua version(5.1), default support 5.3</span><br><span class="line">-a              : attributes need to export, use &#x27;;&#x27; to separate, if &quot;&quot;-a&quot;&quot; only, all attributes whill be exported</span><br><span class="line">-e              : enums need to export, use &#x27;;&#x27; to separate, if &quot;&quot;-e&quot;&quot; only, all enums will be exported</span><br><span class="line">-ei             : enums is represented by a variable reference rather than a constant value, need to be used with -e</span><br><span class="line">-p              : do not use debug.setmetatable, in some Addon/Plugin environment debug object cannot be used</span><br><span class="line">-metadata       : export all metadata, use @CSharpLua.Metadata annotations for precise control</span><br><span class="line">-module         : the currently compiled assembly needs to be referenced, it&#x27;s useful for multiple module compiled</span><br><span class="line">-inline-property: inline some single-line properties</span><br><span class="line">-include        : the root directory of the CoreSystem library, adds all the dependencies to a single file named out.lua</span><br><span class="line">-noconcurrent   : close concurrent compile</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>打开 CSharp.lua.sln<br>自己可编译 我这里选择 Release Build</p><p><img src="/images/csharplua/2.png" alt="截图"></p><p>红色标记处为编译成功后</p><p>这里新建一个文件夹讲红色标记文件拷出</p><p><img src="/images/csharplua/3.png" alt="截图"></p><p>cmd测试： dotnet CSharp.lua.Launcher.dll -h</p><p><img src="/images/csharplua/1.png" alt="截图"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CSharpLua&quot;&gt;&lt;a href=&quot;#CSharpLua&quot; class=&quot;headerlink&quot; title=&quot;CSharpLua&quot;&gt;&lt;/a&gt;CSharpLua&lt;/h1&gt;&lt;p&gt;一个翻译c#为Lua的工具&lt;br&gt;Git地址&lt;a href=&quot;https://git</summary>
+      
+    
+    
+    
+    <category term="Tools" scheme="https://leolichenxi.github.io/categories/Tools/"/>
+    
+    
+    <category term="Charp Lua" scheme="https://leolichenxi.github.io/tags/Charp-Lua/"/>
+    
+  </entry>
   
   <entry>
     <title>四叉树</title>
@@ -37,6 +61,31 @@
     
     
     <category term="算法" scheme="https://leolichenxi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GoogleProtobuffer</title>
+    <link href="https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/"/>
+    <id>https://leolichenxi.github.io/2021/06/14/Tools/GoogleProtobuffer/</id>
+    <published>2021-06-14T04:00:00.000Z</published>
+    <updated>2021-06-16T08:51:50.686Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Protocolbuffers"><a href="#Protocolbuffers" class="headerlink" title="Protocolbuffers"></a>Protocolbuffers</h1><ul><li><a href="https://github.com/protocolbuffers/protobuf">官方git地址</a></li><li><a href="https://developers.google.com/protocol-buffers">官方文档地址</a></li><li><a href="https://github.com/protocolbuffers/protobuf/releases">官方Release</a></li><li><a href="https://zhuanlan.zhihu.com/p/38200420">知乎介绍</a></li></ul><p>Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，很适合做数据存储或 RPC 数据交换格式。它可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。</p><p>常见的数据格式：XML,Json,Protobuf,FlatBuffers 等其它。</p><ul><li>数据储存</li><li>数据交换格式</li></ul><p>使用流程：</p><p>1.编写Scheme;<br>2.使用Protoc 生成代码；</p><h2 id="下载Release-Protoc代码生成工具"><a href="#下载Release-Protoc代码生成工具" class="headerlink" title="下载Release Protoc代码生成工具"></a>下载Release Protoc代码生成工具</h2><blockquote><p>Release中下载Window 或 Mac Os<br><img src="/images/protobuffer/1.png" alt="截图"></p></blockquote><h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><p>在下载程序后，需要将下载 zip 文件中的 bin 目录设置到环境变量中。</p><p>然后运行 protoc –version 来确定你的编译运行版本已经被正确配置。</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><a href="https://developers.google.com/protocol-buffers">官方文档地址</a></p><p>生成代码命令</p><blockquote><p>eg:   protoc – csharp_out=SciptOutFolder/  ProtoFolder/filename.proto</p></blockquote><h3 id="Protocol-Buffer-编码原理"><a href="#Protocol-Buffer-编码原理" class="headerlink" title="Protocol Buffer 编码原理"></a>Protocol Buffer 编码原理</h3><p>采用Varint编码规则</p><h4 id="Varint编码"><a href="#Varint编码" class="headerlink" title="Varint编码"></a>Varint编码</h4><p>variant是可变长的编码方式,Varint是一种使用一个或多个字节序列化整数的方法，会把整数编码变为长字节，对于32位整型进过Variant编码后需要1-5个字节,小的数字使用1个byte，大的数字使用5个bytes。64位整型数据编码后占用1~10个字节。在实际场景中小数字的使用率远远大于大数字，因此Varint编码对于大部分的场景都可以起到很好的压缩效果。</p><h5 id="编码原理"><a href="#编码原理" class="headerlink" title="编码原理"></a>编码原理</h5><p>除了最后一个字节外,Varint编码中的每个字节都设置了最高有效位（most significant bit - msb）–msb为1则表明后面的字节还是属于当前数据的,如果是0那么这是当前数据的最后一个字节数据。每个字节的第7位用于以7位为一组存储数字的二进制补码表示，最低有效组在前，或者叫最低有效字节在前。这表明varint编码后数据的字节是按照小端序排列的。</p><p>关于字节排列的方式引用一下维基百科上的词条</p><blockquote><p>字节的排列方式有两个通用规则。例如，一个多位的整数，按照存储地址从低到高排序的字节中，如果该整数的最低有效字节（类似于最低有效位）在最高有效字节的前面，则称小端序；反之则称大端序。在网络应用中，字节序是一个必须被考虑的因素，因为不同机器类型可能采用不同标准的字节序，所以均按照网络标准转化。</p></blockquote><p>通俗一点说就是：大端序是按照数字的书写顺序排列的，而小端序是颠倒书写顺序进行排列的。</p><blockquote><p>variant编码对负数编码效率低</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Protocolbuffers&quot;&gt;&lt;a href=&quot;#Protocolbuffers&quot; class=&quot;headerlink&quot; title=&quot;Protocolbuffers&quot;&gt;&lt;/a&gt;Protocolbuffers&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;htt</summary>
+      
+    
+    
+    
+    <category term="Tools" scheme="https://leolichenxi.github.io/categories/Tools/"/>
+    
+    
+    <category term="GoogleProtobuffer" scheme="https://leolichenxi.github.io/tags/GoogleProtobuffer/"/>
     
   </entry>
   
