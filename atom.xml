@@ -90,6 +90,31 @@
   </entry>
   
   <entry>
+    <title>ECS架构</title>
+    <link href="https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/"/>
+    <id>https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/</id>
+    <published>2021-06-14T04:00:00.000Z</published>
+    <updated>2021-07-06T06:58:20.785Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>ECS ,即  Entity-Component-System 的缩写，其模式遵循组合优于继承原则，游戏内的每一个单位都是一个实体，每个实体又又一个或多个组件构成，每个组件仅仅包含代表其特性的数据(即在组件中没有任何方法),系统便是来处理拥有一个或多个相同组件的实体集合的工具，其只拥有行为，在这个例子中，处理移动的系统仅仅关心拥有移动能力的实体，它会遍历所有拥有相关组件的实体，并根据相关的数据，更新实体。</p></blockquote><p><img src="/images/ecs/1.png" alt="截图"></p><p>这里核心思路区别于Unity ECS，提供一个设计思路。Unity 后面单独研究下</p><p>ECS 获取组件较为麻烦。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;ECS ,即  Entity-Component-System 的缩写，其模式遵循组合优于继承原则，游戏内的每一个单位都是一个实体，每个实体又又一个或多个组件构成，每个组件仅仅包含代表其特性的数据(即在组件中没有任何方法),系统便是来处理拥有一个或</summary>
+      
+    
+    
+    
+    <category term="ECS" scheme="https://leolichenxi.github.io/categories/ECS/"/>
+    
+    
+    <category term="框架" scheme="https://leolichenxi.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo Pure主题设置记录</title>
     <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/"/>
     <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/</id>

@@ -16,18 +16,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>tags | 李晨曦</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://leolichenxi.github.io/tags/index.html">
+  <title>ECS架构 | 李晨曦</title>
+  <meta name="description" content="ECS ,即  Entity-Component-System 的缩写，其模式遵循组合优于继承原则，游戏内的每一个单位都是一个实体，每个实体又又一个或多个组件构成，每个组件仅仅包含代表其特性的数据(即在组件中没有任何方法),系统便是来处理拥有一个或多个相同组件的实体集合的工具，其只拥有行为，在这个例子中，处理移动的系统仅仅关心拥有移动能力的实体，它会遍历所有拥有相关组件的实体，并根据相关的数据，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECS架构">
+<meta property="og:url" content="https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/index.html">
 <meta property="og:site_name" content="CXGame">
+<meta property="og:description" content="ECS ,即  Entity-Component-System 的缩写，其模式遵循组合优于继承原则，游戏内的每一个单位都是一个实体，每个实体又又一个或多个组件构成，每个组件仅仅包含代表其特性的数据(即在组件中没有任何方法),系统便是来处理拥有一个或多个相同组件的实体集合的工具，其只拥有行为，在这个例子中，处理移动的系统仅仅关心拥有移动能力的实体，它会遍历所有拥有相关组件的实体，并根据相关的数据，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-11T10:32:12.000Z">
-<meta property="article:modified_time" content="2021-06-11T10:33:56.833Z">
+<meta property="og:image" content="https://leolichenxi.github.io/images/ecs/1.png">
+<meta property="article:published_time" content="2021-06-14T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-06T06:58:20.785Z">
 <meta property="article:author" content="李晨曦">
+<meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://leolichenxi.github.io/images/ecs/1.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://leolichenxi.github.io/tags/index.html">
+  <link rel="canonical" href="https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/index.html">
   
     <link rel="alternate" href="/atom.xml" title="CXGame" type="application/atom+xml">
   
@@ -328,323 +333,211 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">tags</h1>
-      <p class="text-muted hidden-xs">共 7 个标签</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/pure/">pure</a></li>
-          
-          <li><a href="/tags/UE4/">UE4</a></li>
-          
-          <li><a href="/tags/hexo/">hexo</a></li>
-          
-          <li><a href="/tags/算法/">算法</a></li>
-          
-          <li><a href="/tags/Charp-Lua/">Charp Lua</a></li>
-          
-          <li><a href="/tags/GoogleProtobuffer/">GoogleProtobuffer</a></li>
-          
-          <li><a href="/tags/框架/">框架</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
       
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/pure/" title="#pure"><i class="fa fa-tag"></i> #pure</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-U3D/ECS/ECS架构" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
         
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/">Hexo Pure主题设置记录</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/pure/" class="label label-default mb">pure</a>
-     
-   </div>
-   
-</article>
+  
+    <h1 class="article-title" itemprop="name">
+      ECS架构
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/" class="article-date">
+	  <time datetime="2021-06-14T04:00:00.000Z" itemprop="datePublished">2021-06-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/ECS/">ECS</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag">框架</a>
+  </span>
 
 
-        </div>
         
+	<span class="article-read hidden-xs">
+	    <i class="fa fa-eye" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+	<span class="article-read hidden-xs">
+    	<i class="fa fa-eye" aria-hidden="true"></i>
+    	<span id="/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/" class="leancloud_visitors"  data-flag-title="ECS架构">0</span>
+    </span>
+
+        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 199(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
       </div>
       
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/UE4/" title="#UE4"><i class="fa fa-tag"></i> #UE4</a>
-        <small class="text-muted">(Total 4 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/">1.UE4-安装-Rider for Unreal Engine</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/UE4/" class="label label-default mb">UE4</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/UE4/0.UE4-%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">UE4-踩坑记录</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/UE4/" class="label label-default mb">UE4</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/UE4/3.UE4-FString/">3.UE4-FString</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/UE4/" class="label label-default mb">UE4</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/UE4/2.UE4-%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/">2.UE4-新建工程</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/UE4/" class="label label-default mb">UE4</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/hexo/" title="#hexo"><i class="fa fa-tag"></i> #hexo</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-11T05:43:00.000Z" itemprop="datePublished">2021-06-11</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/">Hexo使用记录</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/hexo/" class="label label-default mb">hexo</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/%E7%AE%97%E6%B3%95/" title="#算法"><i class="fa fa-tag"></i> #算法</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-14T04:00:00.000Z" itemprop="datePublished">2021-06-14</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%9B%E5%8F%89%E6%A0%91/">四叉树</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E7%AE%97%E6%B3%95/" class="label label-default mb">算法</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/Charp-Lua/" title="#Charp Lua"><i class="fa fa-tag"></i> #Charp Lua</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-17T04:00:00.000Z" itemprop="datePublished">2021-06-17</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/17/Tools/CSharp.lua/">CSharpLua</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Charp-Lua/" class="label label-default mb">Charp Lua</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/GoogleProtobuffer/" title="#GoogleProtobuffer"><i class="fa fa-tag"></i> #GoogleProtobuffer</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-14T04:00:00.000Z" itemprop="datePublished">2021-06-14</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/14/Tools/GoogleProtobuffer/">GoogleProtobuffer</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/GoogleProtobuffer/" class="label label-default mb">GoogleProtobuffer</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/%E6%A1%86%E6%9E%B6/" title="#框架"><i class="fa fa-tag"></i> #框架</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default shadow-hover" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-06-14T04:00:00.000Z" itemprop="datePublished">2021-06-14</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/">ECS架构</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E6%A1%86%E6%9E%B6/" class="label label-default mb">框架</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <blockquote>
+<p>ECS ,即  Entity-Component-System 的缩写，其模式遵循组合优于继承原则，游戏内的每一个单位都是一个实体，每个实体又又一个或多个组件构成，每个组件仅仅包含代表其特性的数据(即在组件中没有任何方法),系统便是来处理拥有一个或多个相同组件的实体集合的工具，其只拥有行为，在这个例子中，处理移动的系统仅仅关心拥有移动能力的实体，它会遍历所有拥有相关组件的实体，并根据相关的数据，更新实体。</p>
+</blockquote>
+<p><img src="/images/ecs/1.png" alt="截图"></p>
+<p>这里核心思路区别于Unity ECS，提供一个设计思路。Unity 后面单独研究下</p>
+<p>ECS 获取组件较为麻烦。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/" title="ECS架构" target="_blank" rel="external">https://leolichenxi.github.io/2021/06/14/U3D/ECS/ECS%E6%9E%B6%E6%9E%84/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/leolichenxi" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/leolichenxi" target="_blank"><span class="text-dark">李晨曦</span><small class="ml-1x">Game Developer &amp; U3D,UE4</small></a></h3>
+        <div>Game Developer &amp; U3D,UE4</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
+  
+    
+  <section id="comments">
+  	
+       
+
+
+    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/06/14/Tools/GoogleProtobuffer/" title="GoogleProtobuffer"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/" title="Hexo Pure主题设置记录">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+  </div>
+  
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
+            </div>
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -803,7 +696,7 @@ var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
   // https://github.com/imsun/gitment/issues/55
   // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
-  id: 'tags', 
+  id: 'ECS架构', 
   owner: 'leolichenxi', // 可以是你的GitHub用户名，也可以是github id
   repo: 'leolichenxi.github.io',
   oauth: {
