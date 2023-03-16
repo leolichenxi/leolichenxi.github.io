@@ -6,7 +6,7 @@
   <link href="https://leolichenxi.github.io/atom.xml" rel="self"/>
   
   <link href="https://leolichenxi.github.io/"/>
-  <updated>2022-02-21T11:12:30.961Z</updated>
+  <updated>2023-01-05T07:33:07.377Z</updated>
   <id>https://leolichenxi.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/01/05/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E6%80%A7%E8%83%BD%E7%AF%87/"/>
+    <id>https://leolichenxi.github.io/2023/01/05/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E6%80%A7%E8%83%BD%E7%AF%87/</id>
+    <published>2023-01-05T07:33:05.754Z</published>
+    <updated>2023-01-05T07:33:07.377Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/01/05/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%86%85%E5%AD%98%E7%AF%87-%E5%AE%89%E5%8D%93/"/>
+    <id>https://leolichenxi.github.io/2023/01/05/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%86%85%E5%AD%98%E7%AF%87-%E5%AE%89%E5%8D%93/</id>
+    <published>2023-01-05T07:32:49.724Z</published>
+    <updated>2023-01-05T08:08:01.552Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>内存(Memory)是计算机的重要部件，也称内存储器和主存储器，它用于暂时存放CPU中的运算数据，以及与硬盘等外部存储器交换的数据。它是外存与CPU进行沟通的桥梁，计算机中所有程序的运行都在内存中进行，内存性能的强弱影响计算机整体发挥的水平。只要计算机开始运行，操作系统就会把需要运算的数据从内存调到CPU中进行运算，当运算完成，CPU将结果传送出来。</p><p>CPU只能访问其寄存器（Register）和内存（Memory）， 无法直接访问硬盘（Disk）。 存储在硬盘上的数据必须首先传输到内存中才能被CPU访问。从访问速度来看，对寄存器的访问非常快，通常为1纳秒； 对内存的访问相对较慢，通常为100纳秒（使用缓存加速的情况下）；而对硬盘驱动器的访问速度最慢，通常为10毫秒。</p><p>当一个程序加载到内存中时，它由四个内存区域组成：</p><p>堆栈（Stack）：存储由该程序的每个函数创建的临时变量<br>堆（Heap）：该区域特别适用于动态内存分配<br>数据（Data）：存储该程序的全局变量和静态变量<br>代码（Code）：存储该程序的指令</p><h2 id="Android之Dalvik"><a href="#Android之Dalvik" class="headerlink" title="Android之Dalvik"></a>Android之Dalvik</h2><p>Dalvik 是 Google 公司自己设计用于 Android 平台的 Java 虚拟机，Android 工程师编写的 Java 或者 Kotlin 代码最终都是在这台虚拟机中被执行的。在 Android 5.0 之前叫作 DVM，5.0 之后改为 ART（Android Runtime）。</p><p>在整个 Android 操作系统体系中，ART 位于以下图中红框位置：</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;内存&quot;&gt;&lt;a href=&quot;#内存&quot; class=&quot;headerlink&quot; title=&quot;内存&quot;&gt;&lt;/a&gt;内存&lt;/h2&gt;&lt;p&gt;内存(Memory)是计算机的重要部件，也称内存储器和主存储器，它用于暂时存放CPU中的运算数据，以及与硬盘等外部存储器交换的数据。它是外存</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>局部性和缓存命中率</title>
@@ -74,6 +107,30 @@
     
     
     <category term="框架" scheme="https://leolichenxi.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 常见 Crash</title>
+    <link href="https://leolichenxi.github.io/2021/08/30/U3D/ECS/AndroidCrash/"/>
+    <id>https://leolichenxi.github.io/2021/08/30/U3D/ECS/AndroidCrash/</id>
+    <published>2021-08-30T04:00:00.000Z</published>
+    <updated>2023-03-16T01:57:05.932Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Android-Crash"><a href="#Android-Crash" class="headerlink" title="Android Crash"></a>Android Crash</h1><p><a href="https://developer.android.com/games/optimize/crash?hl=zh-cn">Android官网检测和诊断崩溃问题</a></p><p>Android 6.0的源码剖析<a href="http://gityuan.com/2016/06/24/app-crash/">理解Android Crash处理流程</a></p><p><a href="https://zhuanlan.zhihu.com/p/77984555">unity crash 的快速定位</a></p><p>基本概念：</p><ul><li>ANR </li></ul><p>用户在使用App过程中出现弹框，提示应用无响应，计为一次ANR，ANR仅用于Android平台应用。</p><ul><li>Java Crash</li></ul><p>Java 崩溃就是在 Java 代码中，出现了未捕获异常，导致程序异常退出，Jvm虚拟机退出，系统弹框提醒用户，这个我们可以看log查看报错原因，Crash工具都能捕获到。</p><ul><li>Native Crash</li></ul><p>那 Native 崩溃一般都是因为Native代码中访问非法地址或者是地址对齐出现问题，再或者是发生程序主动abort，这些都会产生对应的signal信号，导致程序异常退出</p><ul><li>SIGSEGV </li></ul><p>一般是由于空指针、非法指针造成</p><ul><li>SIGABRT</li></ul><p>后者主要因为 ANR 和调用abort()退出所导致。</p><h1 id="Crash常见原因"><a href="#Crash常见原因" class="headerlink" title="Crash常见原因"></a>Crash常见原因</h1><ul><li><p>OOM</p><p>代码层或资源内存泄漏</p></li><li><p>NullPointerException </p><p>空指针异常</p></li><li><p>IndexOutOfBoundsException</p><p>数组、集合等越界</p></li><li><p>java.lang.StackOverflowError </p><p>堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出时抛出该错误，（死循环了等）</p></li><li><p>ClassCastException </p><p>类型转换异常 </p></li><li><p>ActivityNotFoundException </p><p>Activity未找到异常</p></li><li><p>SecurityException </p><p>安全异常 </p></li><li><p>llegalArgumentException: Service not registered </p><p>服务未注册异常 </p></li><li><p>BadTokenException</p></li></ul><h2 id="错误符号"><a href="#错误符号" class="headerlink" title="错误符号"></a>错误符号</h2><ol><li><p>SIGSEGV 段错误</p><p>SEGV_MAPERR    要访问的地址没有映射到内存空间。 比如上面对空指针的写操作， 当指针被意外复写为一个较小的数值时。</p><p>SEGV_ACCERR    访问的地址没有权限。比如试图对代码段进行写操作。</p></li><li><p>SIGFPE 浮点错误，一般发生在算术运行出错时。</p><p>FPE_INTDIV    除以0</p><p>FPE_INTOVE    整数溢出</p></li><li><p>SIGBUS 总线错误<br>BUS_ADRALN    地址对齐出错。arm cpu比x86 cpu 要求更严格的对齐机制，所以在 arm cpu 机器中比较常见。</p></li><li><p>SIGILL 发生这种错误一般是由于某处内存被意外改写了。</p><p>ILL_ILLOPC    非法的指令操作码</p><p>ILL_ILLOPN    非法的指令操作数</p></li><li><p>当调用堆栈中出现 stack_chk_fail 函数时，一般是由于比如 strcpy 之类的函数调用将栈上的内容覆盖，而引起栈检查失败。</p></li></ol><p><img src="/images/crash/Signum.jpeg" alt="枚举"></p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><blockquote><p>一般分为Java Crash 和 Native Crash</p></blockquote><h2 id="Native-Crash"><a href="#Native-Crash" class="headerlink" title="Native Crash"></a>Native Crash</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol><li>出错时界面不会弹出提示框提醒程序崩溃（Android 5.0以下）</li><li>出错时会弹出提示框提醒程序崩溃（Android 5.0以上）</li><li>程序会直接闪退到系统桌面</li><li>这类错误一般是由C++层代码错误引起的</li><li>绝大部分Crash工具不能够捕获</li></ol><h3 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h3><h1 id="崩溃分析"><a href="#崩溃分析" class="headerlink" title="崩溃分析"></a>崩溃分析</h1><ol><li>堆栈信息查找</li><li>log日志，尤其是warning error相关</li><li>机型信息  GPU 内存 系统 厂商 信息等共性信息，(有可能某个厂商特定修改)</li><li>复现步骤</li></ol><h2 id="Signum-记录"><a href="#Signum-记录" class="headerlink" title="Signum 记录"></a>Signum 记录</h2><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>addr2line，objdump，ndk-stack等几个工具</p><h1 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Android-Crash&quot;&gt;&lt;a href=&quot;#Android-Crash&quot; class=&quot;headerlink&quot; title=&quot;Android Crash&quot;&gt;&lt;/a&gt;Android Crash&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developer</summary>
+      
+    
+    
+    
+    <category term="U3D" scheme="https://leolichenxi.github.io/categories/U3D/"/>
+    
+    
+    <category term="其它" scheme="https://leolichenxi.github.io/tags/%E5%85%B6%E5%AE%83/"/>
     
   </entry>
   
@@ -197,30 +254,6 @@
     
     
     <category term="开发流程" scheme="https://leolichenxi.github.io/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cmd-常用命令</title>
-    <link href="https://leolichenxi.github.io/2021/06/14/cmd/"/>
-    <id>https://leolichenxi.github.io/2021/06/14/cmd/</id>
-    <published>2021-06-14T04:00:00.000Z</published>
-    <updated>2021-08-11T09:49:52.822Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="ipconfig-flushdns"><a href="#ipconfig-flushdns" class="headerlink" title="ipconfig /flushdns"></a>ipconfig /flushdns</h3><h3 id="ipconfig"><a href="#ipconfig" class="headerlink" title="ipconfig"></a>ipconfig</h3><h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;ipconfig-flushdns&quot;&gt;&lt;a href=&quot;#ipconfig-flushdns&quot; class=&quot;headerlink&quot; title=&quot;ipconfig /flushdns&quot;&gt;&lt;/a&gt;ipconfig /flushdns&lt;/h3&gt;&lt;h3 id=&quot;ipc</summary>
-      
-    
-    
-    
-    <category term="shell" scheme="https://leolichenxi.github.io/categories/shell/"/>
-    
-    
-    <category term="shell" scheme="https://leolichenxi.github.io/tags/shell/"/>
     
   </entry>
   
@@ -406,18 +439,42 @@ Loa</summary>
   </entry>
   
   <entry>
+    <title>cmd-常用命令</title>
+    <link href="https://leolichenxi.github.io/2021/06/14/Shell/cmd/"/>
+    <id>https://leolichenxi.github.io/2021/06/14/Shell/cmd/</id>
+    <published>2021-06-14T04:00:00.000Z</published>
+    <updated>2023-01-05T07:32:16.529Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ipconfig-flushdns"><a href="#ipconfig-flushdns" class="headerlink" title="ipconfig /flushdns"></a>ipconfig /flushdns</h3><h3 id="ipconfig"><a href="#ipconfig" class="headerlink" title="ipconfig"></a>ipconfig</h3><h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;ipconfig-flushdns&quot;&gt;&lt;a href=&quot;#ipconfig-flushdns&quot; class=&quot;headerlink&quot; title=&quot;ipconfig /flushdns&quot;&gt;&lt;/a&gt;ipconfig /flushdns&lt;/h3&gt;&lt;h3 id=&quot;ipc</summary>
+      
+    
+    
+    
+    <category term="shell" scheme="https://leolichenxi.github.io/categories/shell/"/>
+    
+    
+    <category term="shell" scheme="https://leolichenxi.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo Pure主题设置记录</title>
     <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/"/>
     <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/</id>
     <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2023-01-05T07:13:15.001Z</updated>
+    <updated>2023-01-05T07:29:39.582Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Pure-设置记录"><a href="#Pure-设置记录" class="headerlink" title="Pure 设置记录"></a>Pure 设置记录</h1><p>新电脑环境设置：<br><a href="https://github.com/cofess/hexo-theme-pure/blob/master/README.cn.md">文档地址</a></p><h3 id="背景动态设置"><a href="#背景动态设置" class="headerlink" title="背景动态设置"></a>背景动态设置</h3><p><a href="https://link.csdn.net/?target=https://github.com/hustcc/canvas-nest.js">背景动画</a> 基于canvas，在\themes\pure\layout\layout.ejs的body中面添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="gitcommet-设置"><a href="#gitcommet-设置" class="headerlink" title="gitcommet 设置"></a>gitcommet 设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  type: gitment  # 启用哪种评论系统</span><br><span class="line">  # disqus:  # enter disqus shortname here</span><br><span class="line">  # youyan: </span><br><span class="line">  #   uid: 2kLH6P3hQG2bNQQ9a9mwRFmd-gzGzoHsz # enter youyan uid </span><br><span class="line">  # livere:</span><br><span class="line">  #   uid: # enter youyan uid </span><br><span class="line">  gitment:</span><br><span class="line">    githubID: githubname</span><br><span class="line">    repo: githubname.github.io</span><br><span class="line">    ClientID: id</span><br><span class="line">    ClientSecret: secrectid</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure><h3 id="访问数设置"><a href="#访问数设置" class="headerlink" title="访问数设置"></a>访问数设置</h3><p>footer.ejs脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class=&quot;footer&quot; itemscope itemtype=&quot;http://schema.org/WPFooter&quot;&gt;</span><br><span class="line">&lt;%- partial(&#x27;_common/social&#x27;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">    &lt;div class=&quot;copyright&quot;&gt;</span><br><span class="line">    &lt;% if(theme.site.copyright) &#123; %&gt;</span><br><span class="line">        &amp;copy; &lt;%= date(new Date(), &#x27;YYYY&#x27;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;span &gt;本站总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Pure-设置记录"><a href="#Pure-设置记录" class="headerlink" title="Pure 设置记录"></a>Pure 设置记录</h1><p>hexo-theme-pure git文档地址：<br><a href="https://github.com/cofess/hexo-theme-pure/blob/master/README.cn.md">文档地址</a></p><h3 id="背景动态设置"><a href="#背景动态设置" class="headerlink" title="背景动态设置"></a>背景动态设置</h3><p><a href="https://link.csdn.net/?target=https://github.com/hustcc/canvas-nest.js">背景动画</a> 基于canvas，在\themes\pure\layout\layout.ejs的body中面添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="gitcommet-设置"><a href="#gitcommet-设置" class="headerlink" title="gitcommet 设置"></a>gitcommet 设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  type: gitment  # 启用哪种评论系统</span><br><span class="line">  # disqus:  # enter disqus shortname here</span><br><span class="line">  # youyan: </span><br><span class="line">  #   uid: 2kLH6P3hQG2bNQQ9a9mwRFmd-gzGzoHsz # enter youyan uid </span><br><span class="line">  # livere:</span><br><span class="line">  #   uid: # enter youyan uid </span><br><span class="line">  gitment:</span><br><span class="line">    githubID: githubname</span><br><span class="line">    repo: githubname.github.io</span><br><span class="line">    ClientID: id</span><br><span class="line">    ClientSecret: secrectid</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure><h3 id="访问数设置"><a href="#访问数设置" class="headerlink" title="访问数设置"></a>访问数设置</h3><p>footer.ejs脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class=&quot;footer&quot; itemscope itemtype=&quot;http://schema.org/WPFooter&quot;&gt;</span><br><span class="line">&lt;%- partial(&#x27;_common/social&#x27;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">    &lt;div class=&quot;copyright&quot;&gt;</span><br><span class="line">    &lt;% if(theme.site.copyright) &#123; %&gt;</span><br><span class="line">        &amp;copy; &lt;%= date(new Date(), &#x27;YYYY&#x27;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;span &gt;本站总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Pure-设置记录&quot;&gt;&lt;a href=&quot;#Pure-设置记录&quot; class=&quot;headerlink&quot; title=&quot;Pure 设置记录&quot;&gt;&lt;/a&gt;Pure 设置记录&lt;/h1&gt;&lt;p&gt;新电脑环境设置：&lt;br&gt;&lt;a href=&quot;https://github.com/co</summary>
+    <summary type="html">&lt;h1 id=&quot;Pure-设置记录&quot;&gt;&lt;a href=&quot;#Pure-设置记录&quot; class=&quot;headerlink&quot; title=&quot;Pure 设置记录&quot;&gt;&lt;/a&gt;Pure 设置记录&lt;/h1&gt;&lt;p&gt;hexo-theme-pure git文档地址：&lt;br&gt;&lt;a href=&quot;https</summary>
       
     
     
@@ -426,76 +483,6 @@ Loa</summary>
     
     
     <category term="pure" scheme="https://leolichenxi.github.io/tags/pure/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1.UE4-安装-Rider for Unreal Engine</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/UE4/1.UE4-%E5%AE%89%E8%A3%85-Rider%20for%20Unreal%20Engine/</id>
-    <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T15:35:21.353Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装UE4"><a href="#安装UE4" class="headerlink" title="安装UE4"></a>安装UE4</h1><p>教程比较多，自行搜索</p><p>个人安装的：</p><table><thead><tr><th>UE4版本</th><th>4.24.3</th></tr></thead><tbody><tr><td>IDE</td><td>Rider for Unreal Engine</td></tr></tbody></table><h3 id="安装后找到此插件"><a href="#安装后找到此插件" class="headerlink" title="安装后找到此插件"></a>安装后找到此插件</h3><p><img src="/images/assets/png/1.png" alt="安装"></p><p>安装 Rider for Unreal Engine；</p><h2 id="安装后修改配置"><a href="#安装后修改配置" class="headerlink" title="安装后修改配置"></a>安装后修改配置</h2><ol><li><p>修改Rider缓存目录：<br>Rider for Unreal Engine 2021.1.1\bin 文件夹下idea.properties文件 <img src="/images/assets/png/2.png" alt="安装Rider"></p></li><li><p>修改ue4缓存目录 <img src="/images/assets/png/3.png" alt="修改缓存"><br>用记事本打开它，然后搜索InstalledDerivedDataBackendGraph并找到%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache把它改为%GAMEDIR%DerivedDataCache</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;安装UE4&quot;&gt;&lt;a href=&quot;#安装UE4&quot; class=&quot;headerlink&quot; title=&quot;安装UE4&quot;&gt;&lt;/a&gt;安装UE4&lt;/h1&gt;&lt;p&gt;教程比较多，自行搜索&lt;/p&gt;
-&lt;p&gt;个人安装的：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;UE4版</summary>
-      
-    
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/categories/UE4/"/>
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/tags/UE4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo使用记录</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo%E4%BD%BF%E7%94%A8/</id>
-    <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T15:36:08.184Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hexo-安装记录"><a href="#Hexo-安装记录" class="headerlink" title="Hexo 安装记录"></a>Hexo 安装记录</h1><p>[地址文档] (<a href="https://hexo.io/zh-cn">https://hexo.io/zh-cn</a>)</p><h3 id="markdown-图片测试问题"><a href="#markdown-图片测试问题" class="headerlink" title="markdown 图片测试问题"></a>markdown 图片测试问题</h3><blockquote><p>在写.md文档时，采用在source 目录下新建个images文件夹。引用图片直接 (/images/图片名)</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Hexo-安装记录&quot;&gt;&lt;a href=&quot;#Hexo-安装记录&quot; class=&quot;headerlink&quot; title=&quot;Hexo 安装记录&quot;&gt;&lt;/a&gt;Hexo 安装记录&lt;/h1&gt;&lt;p&gt;[地址文档] (&lt;a href=&quot;https://hexo.io/zh-cn&quot;&gt;ht</summary>
-      
-    
-    
-    
-    <category term="Hexo" scheme="https://leolichenxi.github.io/categories/Hexo/"/>
-    
-    
-    <category term="hexo" scheme="https://leolichenxi.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UE4-踩坑记录</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/UE4/0.UE4-%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/UE4/0.UE4-%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
-    <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2021-06-11T07:45:33.527Z</updated>
-    
-    
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/categories/UE4/"/>
-    
-    
-    <category term="UE4" scheme="https://leolichenxi.github.io/tags/UE4/"/>
     
   </entry>
   
