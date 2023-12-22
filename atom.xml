@@ -6,7 +6,7 @@
   <link href="https://leolichenxi.github.io/atom.xml" rel="self"/>
   
   <link href="https://leolichenxi.github.io/"/>
-  <updated>2023-12-22T06:42:15.269Z</updated>
+  <updated>2023-12-22T07:37:43.898Z</updated>
   <id>https://leolichenxi.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JetBrains</title>
+    <title>JetBrains设置</title>
     <link href="https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E8%AE%BE%E7%BD%AE/"/>
     <id>https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E8%AE%BE%E7%BD%AE/</id>
     <published>2023-12-22T04:00:00.000Z</published>
-    <updated>2023-12-22T06:42:15.269Z</updated>
+    <updated>2023-12-22T07:37:43.898Z</updated>
     
     <content type="html"><![CDATA[<p>作为JetBrains系列深度依赖用户者,备注一下使用</p><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="缓存设置"><a href="#缓存设置" class="headerlink" title="缓存设置"></a>缓存设置</h3><p>安装得.exe 一般有个 .properties  尾缀，修改配置自己设置的缓存路径</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Uncomment this option if you want to customize a path to the settings directory.</span><br><span class="line">#---------------------------------------------------------------------</span><br><span class="line">idea.config.path=D:\Caches\JetBrains/.IdeaIC/config</span><br><span class="line"></span><br><span class="line">#---------------------------------------------------------------------</span><br><span class="line"># Uncomment this option if you want to customize a path to the caches directory.</span><br><span class="line">#---------------------------------------------------------------------</span><br><span class="line">idea.system.path=D:\Caches\JetBrains/.IdeaIC/system</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="换行设置"><a href="#换行设置" class="headerlink" title="换行设置"></a>换行设置</h3><p>默认宽度 12  可设置</p><p><img src="/2023/12/22/Tools/JetBrains%E8%AE%BE%E7%BD%AE/rider_code_style.png" alt="换行设置"></p><h3 id="关闭自动更新"><a href="#关闭自动更新" class="headerlink" title="关闭自动更新"></a>关闭自动更新</h3><p><img src="/2023/12/22/Tools/JetBrains%E8%AE%BE%E7%BD%AE/rider_set_update.png" alt="关闭自动更新"></p>]]></content>
     
@@ -42,11 +42,11 @@
   </entry>
   
   <entry>
-    <title>VSCode</title>
+    <title>VSCode 快捷键</title>
     <link href="https://leolichenxi.github.io/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://leolichenxi.github.io/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
     <published>2023-12-22T04:00:00.000Z</published>
-    <updated>2023-12-22T06:32:32.545Z</updated>
+    <updated>2023-12-22T07:37:47.874Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf</a><br>##Window<br><img src="/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/window.png" alt="window"></p><p>##Mac<br><img src="/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/mac.png" alt="mac"></p>]]></content>
     
@@ -66,11 +66,11 @@
   </entry>
   
   <entry>
-    <title>JetBrains</title>
+    <title>JetBrains快捷键</title>
     <link href="https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
     <published>2023-12-22T04:00:00.000Z</published>
-    <updated>2023-12-22T06:36:53.920Z</updated>
+    <updated>2023-12-22T07:37:33.948Z</updated>
     
     <content type="html"><![CDATA[<p>==Ctrl==</p><p>Ctrl + A 全选<br>Ctrl + B 快速打开光标处的类或方法(等同于 Ctrl + 鼠标点击)<br>Ctrl + C 复制（不选定内容的话默认会复制光标所在整行）<br>Ctrl + D 复制行或是块（不选定内容的话默认复制当前行到下一行）<br>Ctrl + E 最近打开的文件<br>Ctrl + F 当前代码中查找<br>Ctrl + G 跳到指定行<br>Ctrl + H 显示类层次图<br>Ctrl + J 自动代码提示（提示的是自己定义的代码格式）<br>Ctrl + K git 或 VCS 提交项目<br>Ctrl + L 查看变量的下一个位置（需要先 Ctrl + F 激活查找）<br>Ctrl + M 将光标所在的行移到屏幕中间（连同光标一块移动到屏幕中间）<br>Ctrl + N 查找类<br>Ctrl + O 选择可覆盖/继承的方法<br>Ctrl + P 方法参数提示显示（只显示入参的）<br>Ctrl + Q 鼠标放在变量/类名/方法名等上面（也可以在提示补充的时候按），显示文档内容。（入参，返回值，所属模块等）<br>         同类似的功能还有一个 Ctrl + Shift + I，直接显示函数定义处的内容（所以 Ctrl + P，Ctrl + Q 和 Ctrl + Shift + I<br>         的查看是一个渐进详细的过程）<br>Ctrl + R 替换<br>Ctrl + S 保存<br>Ctrl + T git 或 VCS 更新项目<br>Ctrl + U 前往父类的方法/父类<br>Ctrl + V 粘贴<br>Ctrl + W 选中光标所在的单词 ，连续按会有其他效果 (相反的是Ctrl+Shift+W)<br>ctrl + X 剪切行<br>Ctrl + Y 删除行<br>Ctrl + Z 撤销</p><p>Ctrl + F1 显示错误<br>Ctrl + F3 调转到所选中的词的下一个同名位置<br>Ctrl + F7 Find Usages in File（可以同时查找多个变量）<br>Ctrl + F8 打开或关闭行断点<br>Ctrl + F9 编译<br>Ctrl + F11 弹出一个小框来指定式添加书签(可以对文件或文件夹起作用)<br>Ctrl + F12 当前编辑的文件中快速导航(可以直接键入字母，会筛选你输入的来匹配对应是否有的方法，来快速定位)(类似结构图)<br>Ctrl + Tab 编辑窗口切换 (如果在切换的过程又加按上 delete,则是关闭对应选中的窗口)<br>Ctrl + delete 删除光标后面的单词（delete 只是删除单个字符哟！）<br>Ctrl + home/end 跳到文件头文件尾<br>Ctrl + BackSpace 删除光标前面的单词<br>Ctrl + [ 或 ] 移动光标到块的初/末括号地方<br>Ctrl + / 或 Ctrl+Shift+/ 注释（// 或者/<em>…</em>/ ）<br>Ctrl + 1，2，3，4…. 快速定位到书签代码处(必须先 Ctrl + Shift + 1,2,3,4…添加书签<br>Ctrl + 小键盘+/- 折叠/展开代码<br>Ctrl + 鼠标单击编辑窗口的文件标题 弹出该文件路径,可以通过这个打开文件所在地方(相当于Ctrl + Alt + F12)<br>Ctrl + ← 或 → 光标跳到上/下个单词<br>Ctrl + ↑ 或 ↓ 相当于你用鼠标滑滚轮(为了方便鼠标党)<br>Ctrl + ` 快速切换常用设置</p><p>==Alt==</p><p>Alt + 1 切换到 Project 模块<br>Alt + 2 切换到 Favorites 模块<br>Alt + 3 切换到 Find 模块<br>Alt + 4 切换到 Run 模块<br>Alt + 5 切换到 Debug 模块<br>Alt + 6 切换到 Problems 模块<br>Alt + 7 切换到 Structure 模块<br>Alt + 8 切换到 Services 模块<br>Alt + 9 切换到 Git 模块<br>Alt + Q Context Info（上下文信息，可以快速帮你定位当前位置的上下文）<br>Alt + F1 弹出文件选择目标，这个很好用的<br>Alt + F2 多个浏览器预览<br>Alt + F3 选中文本，逐个往下查找相同文本，并高亮显示（类似于 Ctrl + C， Ctrl + F）。<br>Alt + F4 关闭软件<br>Alt + F7 查看该方法/变量/类被调用的地方<br>Alt + F8 在debug 的状态下，选中某些变量或是对象，按此快捷键弹出可输入变量、方法的调试框，指定查看该内容的 debug 情况<br>Alt + F12 进入终端<br>Alt + Home 跳到文件导航bar<br>Alt + Insert 生成代码(如 get,set 方法,构造函数等)<br>Alt + ← 或 → 切换当前打开的代码文件视图<br>Alt + ↑ 或 ↓ 在方法间快速移动定位<br>Alt + Enter 快速修复(可以用来导入单个包)<br>Alt + ` VCS快捷选项</p><p>==Shift==</p><p>Shift + F6  重构：重新命名<br>Shift + F9 debug 当前程序，相当于点击 debug 按钮<br>Shift + F10 Run(运行)当前程序，相当于点击 run 按钮<br>Shift + F11 查看书签<br>Shift + end 选中从光标到end 处<br>Shift + home 选中从光标到 home 处<br>Shift + Enter 光标所在行下空出一行，光标跳下<br>Shift + 单击 可以关闭文件<br>Shift + 滚轮 横向滚动轴滚动(非常强大，现在好多文本编辑器都默认有这个功能了)</p><p>==Ctrl+Alt==</p><p>Ctrl + Alt + A git add (需要先配置 git)<br>Ctrl + Alt + B 跳到具体的实现方法，查找接口/抽象方法的具体实现很好用(相反行为的快捷键是Ctrl+b)<br>Ctrl + Alt + C 快速引进一个常量<br>Ctrl + Alt + F 快速引进一个实例变量<br>Ctrl + Alt + I 选中部分自动缩进行（有点类似格式化，但是只是整理行格式而已）<br>Ctrl + Alt + L 格式化代码<br>Ctrl + Alt + M 方法抽取/重构<br>Ctrl + Alt + N 将方法内联化<br>Ctrl + Alt + O 优化导入的类和包<br>Ctrl + Alt + P 参数抽取<br>Ctrl + Alt + S 快速打开设置 Settings<br>Ctrl + Alt + T 选中的地方代码环绕提示 例如 ：try/catch 选中的一块代码<br>Ctrl + Alt + V 快速引进一个变量名<br>Ctrl + Alt + W 关闭所有编辑的快捷键（自己添加，再 close all）<br>Ctrl + Alt + Y 从磁盘重载<br>Ctrl + Alt + Z git rollback (需要先配置 git)<br>Ctrl + Alt + F5 Attach to Process<br>Ctrl + Alt + F7 寻找被该类或是变量被使用的地方，用弹出框的方式找出来，，也类似于 Ctrl + 鼠标 左击。跟 Alt+F7 效果一样，但是因为是弹出框，选中了一个位置就会消失。<br>Ctrl + Alt + F12 文件路径<br>Ctrl + Alt + Enter 光标所在行上空出一行，光标跳上<br>Ctrl + Alt + home 弹出跟当前文件有关联的文件目录(比如jsp 里面有导入几个js 和 css,这些文件就是关联文件)<br>Ctrl + Alt + ← 或 →  退回/前进到上一个操作的地方<br>Ctrl + Alt + ↑ 或 ↓ 在 Find 模式下，挑到上/下个查找的文件<br>Ctrl + Alt + 空格 类名或接口名提示(可能会和输入法快捷键冲突)</p><p>==Ctrl+Shift==</p><p>Ctrl + Shift + A Find Action<br>Ctrl + Shift + B 变量类型声明<br>Ctrl + Shift + C 复制当前文件磁盘路径到剪贴板<br>Ctrl + Shift + E 最近更改的文件<br>Ctrl + Shift + F 全局查找文件（通过某个词，指定要搜索的文件类型，目录。注意：这个也可能会和 Windows 的简繁切换快捷键相冲突哟！！！）<br>Ctrl + Shift + I 在方法名或是类名下，按此快捷键显示该方法或是类的源码结构，无需点击进去查看源码（当然了，必须是你已经导入源码的情况下才看得到）<br>Ctrl + Shift + J 自动将下一行合并到当前行末尾<br>Ctrl + Shift + K git push<br>Ctrl + Shift + M 光标位置在括号前后切换<br>Ctrl + Shift + N 通过输入文件名和行号（可以输入部分名称，支持模糊）来定位查找文件<br>Double + Shift (快速双击 Shift)搜索最近打开的文件，我也是经常误触才发现他这个功能<br>Ctrl + Shift + P 表达式的类型信息<br>Ctrl + Shift + R 搜索指定范围文件，替换文字<br>Ctrl + Shift + T 如果在常规类下按它，弹出已写好的，可选择的对应 Test 类，如果在该 Test 类下按它，则直接回到源类。<br>Ctrl + Shift + U // 大/小写都是这个快捷键<br>Ctrl + Shift + V 粘贴最近复制过的一些信息（从历史记录粘贴）<br>Ctrl + Shift + W Ctrl + W 的逆向操作<br>Ctrl + Shift + Y Code With Me<br>Ctrl + Shift + Z 取消撤销（恢复上一次操作）<br>Ctrl + Shift + F7 高亮显示所有该选中文本，按 Esc 高亮消失。<br>Ctrl + Shift + F8 查看断点<br>Ctrl + Shift + F12 编辑器全屏<br>Ctrl + Shift + Del 删除环绕的标签<br>Ctrl + Shift + 1，2，3… 快速添加书签<br>Ctrl + Shift + Space 自动补全代码（智能提示）<br>Ctrl + Shift + Enter 自动给末尾加;完成代码<br>Ctrl + Shift + ↑ 或 ↓ 移动光标所在 statement 域移动到上/下 (Alt + Shift + ↑ 或 ↓ 移动光标所在行到上/下)<br>Ctrl + Shift + [ 或 ] 选中从光标所在位置到它的父级区域(界面上层导航可能更开)<br>Ctrl + Shift + 小键盘 + 或 – 折叠/展开所有代码<br>Ctrl + Shift + ← 或 →  选中临边左/右的单词或是符号<br>Ctrl + Shift + / 块注释（使用 =begin block =end 进行注释）<br>Ctrl + Shift + Backspace(退格)  回到上次修改的地方(跟 Ctrl+Alt+左右方向键不一样的地方是，只回退到修改的地方，而不是过去光标放的地方)</p><p>==Alt+Shift==</p><p>Alt + Shfit + B 查看当前行对应的 commit 提交记录详情<br>Alt + Shift + C 查看最近操作项目的变化情况列表(在版本控制下，显示比较缓慢)<br>Alt + Shift + F 添加到收藏夹<br>Alt + Shift + G 进入多行选取模式并将光标放在所选行的末尾(简单理解就是，选中多行之后使用这个快捷键，你可以同时往这多行末尾添加相同的内容，感觉和列模式有些像，但列模式不同行的光标都在同一列，这块不同行的光标可以不在同一列 —— 都在各自行的末尾)<br>Alt + Shift + J 取消选中（有点像 Ctrl + Alt + Shift + J 的逆操作，不过 Alt + Shift + J 每次只取消选中一个地方）<br>Alt + Shift + L 加载上下文<br>Alt + Shift + N 添加任务<br>Alt + Shift + S 保存上下文<br>Alt + Shift + T 切换任务<br>Alt + Shift + U 驼峰命名法和蛇形命名法切换(需要先选中方法名对应的字符串)<br>Alt + Shift + W 关闭活跃任务<br>Alt + Shift + X 清理上下文<br>Alt + Shift + F9  弹出debug 运行菜单，提供选择性debug 哪个(这个需要自己尝试下，按后会有弹出框，记得查看)<br>Alt + Shift + F10 弹出run 菜单，提供选择性run 哪个(这个需要自己尝试下，按后会有弹出框，记得查看)<br>Alt + Shift + ↑ 或 ↓ 移动光标所在行到上/下<br>Alt + Shift + Insert 切换到列选择模式（再次可切换回行选择模式）<br>Alt + Shift + 鼠标左键单击不放,拖动 可以直接方块区域选择（也叫列选或块选，批量修改列的时候很有用）</p><p>==Ctrl+Alt+Shift==  （用得不多，因为总感觉手指头不太够用）</p><p>Ctrl + Alt + Shift + C 复制参考信息(方法的继承关系，或文件相对路径及当前所在行号)<br>Ctrl + Alt + Shift + D 以 UML 的形式显示改动<br>Ctrl + Alt + Shift + L 格式化文件<br>Ctrl + Alt + Shift + J 选中所有用到当前方法的地方（这个用来统一修改函数名和调用点函数名之类的很有用，就不用单独一个个去修改了）<br>Ctrl + Alt + Shift + N 查找类中的方法或变量<br>Ctrl + Alt + Shift + T 选择重构方式<br>Ctrl + Alt + Shift + V 不带格式的简单黏贴<br>Ctrl + Alt + Shift + X Deployment -&gt; Upload to (上传文件改动到指定服务器，对于将本地文件改动快速同步到远端服务器的时候很好用)<br>Ctrl + Alt + Shift + F7 Find Usages Settings<br>Ctrl + Alt + Shift + F8 添加临时行断点</p>]]></content>
     
@@ -343,11 +343,11 @@
   </entry>
   
   <entry>
-    <title>CMake</title>
+    <title>CMake 操作记录</title>
     <link href="https://leolichenxi.github.io/2021/06/17/Tools/Cmake/"/>
     <id>https://leolichenxi.github.io/2021/06/17/Tools/Cmake/</id>
     <published>2021-06-17T04:00:00.000Z</published>
-    <updated>2023-06-13T02:38:55.325Z</updated>
+    <updated>2023-12-22T07:38:06.229Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CMAKE-使用"><a href="#CMAKE-使用" class="headerlink" title="CMAKE 使用"></a>CMAKE 使用</h1><p>考虑到在项目中定义Native库和编译其它的开源Native库，客户端往往对编译原理计算机基础比较薄弱，记录下CMake使用笔记</p><p>主要从官网记录</p><p><a href="https://cmake.org/">CMake官网</a></p>]]></content>
     
