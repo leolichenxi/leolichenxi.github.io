@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>JetBrains | 李晨曦</title>
+  <meta name="description" content="&#x3D;&#x3D;Ctrl&#x3D;&#x3D; Ctrl + A 全选Ctrl + B 快速打开光标处的类或方法(等同于 Ctrl + 鼠标点击)Ctrl + C 复制（不选定内容的话默认会复制光标所在整行）Ctrl + D 复制行或是块（不选定内容的话默认复制当前行到下一行）Ctrl + E 最近打开的文件Ctrl + F 当前代码中查找Ctrl + G 跳到指定行Ctrl + H 显示类层次图Ctrl + J 自动代码提示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JetBrains">
+<meta property="og:url" content="https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/index.html">
+<meta property="og:site_name" content="CXGame">
+<meta property="og:description" content="&#x3D;&#x3D;Ctrl&#x3D;&#x3D; Ctrl + A 全选Ctrl + B 快速打开光标处的类或方法(等同于 Ctrl + 鼠标点击)Ctrl + C 复制（不选定内容的话默认会复制光标所在整行）Ctrl + D 复制行或是块（不选定内容的话默认复制当前行到下一行）Ctrl + E 最近打开的文件Ctrl + F 当前代码中查找Ctrl + G 跳到指定行Ctrl + H 显示类层次图Ctrl + J 自动代码提示">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-22T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-22T06:36:53.920Z">
+<meta property="article:author" content="李晨曦">
+<meta property="article:tag" content="JetBrains">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="CXGame" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    
+
+  <script data-ad-client="ca-pub-8216597248911463" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/leolichenxi" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">李晨曦</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Game Developer &amp; U3D,UE4</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="fa fa-map-marker"></i> Shanghai, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <!-- <span class="ins-close ins-selectable"><i class="fa fa-times"></i></span> -->
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="fa fa-fw fa-dashboard"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="fa fa-fw fa-delicious"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="fa fa-fw fa-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="fa fa-fw fa-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="fa fa-fw fa-code"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="fa fa-fw fa-coffee"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/leolichenxi" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            
+            <p>您好，您是第<span id="busuanzi_value_site_uv">0</span>位访客</p>
+            
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Codes/">Codes</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ShaderLab/">ShaderLab</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/U3D/">U3D</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/UE4/">UE4</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lua/">lua</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9F%BA%E7%A1%80/">基础</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AAB/" rel="tag">AAB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMake/" rel="tag">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Charp-Lua/" rel="tag">Charp Lua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Codes/" rel="tag">Codes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GoogleProtobuffer/" rel="tag">GoogleProtobuffer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JetBrains/" rel="tag">JetBrains</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UE4/" rel="tag">UE4</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/" rel="tag">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/builtin-shaders/" rel="tag">builtin_shaders</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lua/" rel="tag">lua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pure/" rel="tag">pure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%98%E5%8C%96/" rel="tag">优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E5%AE%83/" rel="tag">其它</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" rel="tag">开发流程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag">框架</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/AAB/" style="font-size: 13px;">AAB</a> <a href="/tags/CMake/" style="font-size: 13px;">CMake</a> <a href="/tags/Charp-Lua/" style="font-size: 13px;">Charp Lua</a> <a href="/tags/Codes/" style="font-size: 13px;">Codes</a> <a href="/tags/GoogleProtobuffer/" style="font-size: 13px;">GoogleProtobuffer</a> <a href="/tags/JetBrains/" style="font-size: 13.5px;">JetBrains</a> <a href="/tags/UE4/" style="font-size: 14px;">UE4</a> <a href="/tags/VSCode/" style="font-size: 13px;">VSCode</a> <a href="/tags/adb/" style="font-size: 13px;">adb</a> <a href="/tags/builtin-shaders/" style="font-size: 13px;">builtin_shaders</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/lua/" style="font-size: 13px;">lua</a> <a href="/tags/pure/" style="font-size: 13px;">pure</a> <a href="/tags/shell/" style="font-size: 13px;">shell</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 13.5px;">优化</a> <a href="/tags/%E5%85%B6%E5%AE%83/" style="font-size: 13px;">其它</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13px;">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" style="font-size: 13px;">开发流程</a> <a href="/tags/%E6%A1%86%E6%9E%B6/" style="font-size: 13.5px;">框架</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13px;">算法</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 13.5px;">资源</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">22</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Tools/">Tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/12/22/Tools/JetBrains%E8%AE%BE%E7%BD%AE/" class="title">JetBrains</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-12-22T04:00:00.000Z" itemprop="datePublished">2023-12-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Tools/">Tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="title">VSCode</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-12-22T04:00:00.000Z" itemprop="datePublished">2023-12-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Tools/">Tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="title">JetBrains</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-12-22T04:00:00.000Z" itemprop="datePublished">2023-12-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Tools/">Tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/12/22/Shell/adb/" class="title">adb常用命令记录</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-12-22T04:00:00.000Z" itemprop="datePublished">2023-12-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/08/17/U3D/VertexStreamSplitting/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-08-17T03:57:38.904Z" itemprop="datePublished">2023-08-17</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Tools/JetBrains快捷键" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JetBrains
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="article-date">
+	  <time datetime="2023-12-22T04:00:00.000Z" itemprop="datePublished">2023-12-22</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tools/">Tools</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link-link" href="/tags/JetBrains/" rel="tag">JetBrains</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="fa fa-eye" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+	<span class="article-read hidden-xs">
+    	<i class="fa fa-eye" aria-hidden="true"></i>
+    	<span id="/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="leancloud_visitors"  data-flag-title="JetBrains">0</span>
+    </span>
+
+        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2.8k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 11(分)</span>
+	
+
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <p>==Ctrl==</p>
+<p>Ctrl + A 全选<br>Ctrl + B 快速打开光标处的类或方法(等同于 Ctrl + 鼠标点击)<br>Ctrl + C 复制（不选定内容的话默认会复制光标所在整行）<br>Ctrl + D 复制行或是块（不选定内容的话默认复制当前行到下一行）<br>Ctrl + E 最近打开的文件<br>Ctrl + F 当前代码中查找<br>Ctrl + G 跳到指定行<br>Ctrl + H 显示类层次图<br>Ctrl + J 自动代码提示（提示的是自己定义的代码格式）<br>Ctrl + K git 或 VCS 提交项目<br>Ctrl + L 查看变量的下一个位置（需要先 Ctrl + F 激活查找）<br>Ctrl + M 将光标所在的行移到屏幕中间（连同光标一块移动到屏幕中间）<br>Ctrl + N 查找类<br>Ctrl + O 选择可覆盖/继承的方法<br>Ctrl + P 方法参数提示显示（只显示入参的）<br>Ctrl + Q 鼠标放在变量/类名/方法名等上面（也可以在提示补充的时候按），显示文档内容。（入参，返回值，所属模块等）<br>         同类似的功能还有一个 Ctrl + Shift + I，直接显示函数定义处的内容（所以 Ctrl + P，Ctrl + Q 和 Ctrl + Shift + I<br>         的查看是一个渐进详细的过程）<br>Ctrl + R 替换<br>Ctrl + S 保存<br>Ctrl + T git 或 VCS 更新项目<br>Ctrl + U 前往父类的方法/父类<br>Ctrl + V 粘贴<br>Ctrl + W 选中光标所在的单词 ，连续按会有其他效果 (相反的是Ctrl+Shift+W)<br>ctrl + X 剪切行<br>Ctrl + Y 删除行<br>Ctrl + Z 撤销</p>
+<p>Ctrl + F1 显示错误<br>Ctrl + F3 调转到所选中的词的下一个同名位置<br>Ctrl + F7 Find Usages in File（可以同时查找多个变量）<br>Ctrl + F8 打开或关闭行断点<br>Ctrl + F9 编译<br>Ctrl + F11 弹出一个小框来指定式添加书签(可以对文件或文件夹起作用)<br>Ctrl + F12 当前编辑的文件中快速导航(可以直接键入字母，会筛选你输入的来匹配对应是否有的方法，来快速定位)(类似结构图)<br>Ctrl + Tab 编辑窗口切换 (如果在切换的过程又加按上 delete,则是关闭对应选中的窗口)<br>Ctrl + delete 删除光标后面的单词（delete 只是删除单个字符哟！）<br>Ctrl + home/end 跳到文件头文件尾<br>Ctrl + BackSpace 删除光标前面的单词<br>Ctrl + [ 或 ] 移动光标到块的初/末括号地方<br>Ctrl + / 或 Ctrl+Shift+/ 注释（// 或者/<em>…</em>/ ）<br>Ctrl + 1，2，3，4…. 快速定位到书签代码处(必须先 Ctrl + Shift + 1,2,3,4…添加书签<br>Ctrl + 小键盘+/- 折叠/展开代码<br>Ctrl + 鼠标单击编辑窗口的文件标题 弹出该文件路径,可以通过这个打开文件所在地方(相当于Ctrl + Alt + F12)<br>Ctrl + ← 或 → 光标跳到上/下个单词<br>Ctrl + ↑ 或 ↓ 相当于你用鼠标滑滚轮(为了方便鼠标党)<br>Ctrl + ` 快速切换常用设置</p>
+<p>==Alt==</p>
+<p>Alt + 1 切换到 Project 模块<br>Alt + 2 切换到 Favorites 模块<br>Alt + 3 切换到 Find 模块<br>Alt + 4 切换到 Run 模块<br>Alt + 5 切换到 Debug 模块<br>Alt + 6 切换到 Problems 模块<br>Alt + 7 切换到 Structure 模块<br>Alt + 8 切换到 Services 模块<br>Alt + 9 切换到 Git 模块<br>Alt + Q Context Info（上下文信息，可以快速帮你定位当前位置的上下文）<br>Alt + F1 弹出文件选择目标，这个很好用的<br>Alt + F2 多个浏览器预览<br>Alt + F3 选中文本，逐个往下查找相同文本，并高亮显示（类似于 Ctrl + C， Ctrl + F）。<br>Alt + F4 关闭软件<br>Alt + F7 查看该方法/变量/类被调用的地方<br>Alt + F8 在debug 的状态下，选中某些变量或是对象，按此快捷键弹出可输入变量、方法的调试框，指定查看该内容的 debug 情况<br>Alt + F12 进入终端<br>Alt + Home 跳到文件导航bar<br>Alt + Insert 生成代码(如 get,set 方法,构造函数等)<br>Alt + ← 或 → 切换当前打开的代码文件视图<br>Alt + ↑ 或 ↓ 在方法间快速移动定位<br>Alt + Enter 快速修复(可以用来导入单个包)<br>Alt + ` VCS快捷选项</p>
+<p>==Shift==</p>
+<p>Shift + F6  重构：重新命名<br>Shift + F9 debug 当前程序，相当于点击 debug 按钮<br>Shift + F10 Run(运行)当前程序，相当于点击 run 按钮<br>Shift + F11 查看书签<br>Shift + end 选中从光标到end 处<br>Shift + home 选中从光标到 home 处<br>Shift + Enter 光标所在行下空出一行，光标跳下<br>Shift + 单击 可以关闭文件<br>Shift + 滚轮 横向滚动轴滚动(非常强大，现在好多文本编辑器都默认有这个功能了)</p>
+<p>==Ctrl+Alt==</p>
+<p>Ctrl + Alt + A git add (需要先配置 git)<br>Ctrl + Alt + B 跳到具体的实现方法，查找接口/抽象方法的具体实现很好用(相反行为的快捷键是Ctrl+b)<br>Ctrl + Alt + C 快速引进一个常量<br>Ctrl + Alt + F 快速引进一个实例变量<br>Ctrl + Alt + I 选中部分自动缩进行（有点类似格式化，但是只是整理行格式而已）<br>Ctrl + Alt + L 格式化代码<br>Ctrl + Alt + M 方法抽取/重构<br>Ctrl + Alt + N 将方法内联化<br>Ctrl + Alt + O 优化导入的类和包<br>Ctrl + Alt + P 参数抽取<br>Ctrl + Alt + S 快速打开设置 Settings<br>Ctrl + Alt + T 选中的地方代码环绕提示 例如 ：try/catch 选中的一块代码<br>Ctrl + Alt + V 快速引进一个变量名<br>Ctrl + Alt + W 关闭所有编辑的快捷键（自己添加，再 close all）<br>Ctrl + Alt + Y 从磁盘重载<br>Ctrl + Alt + Z git rollback (需要先配置 git)<br>Ctrl + Alt + F5 Attach to Process<br>Ctrl + Alt + F7 寻找被该类或是变量被使用的地方，用弹出框的方式找出来，，也类似于 Ctrl + 鼠标 左击。跟 Alt+F7 效果一样，但是因为是弹出框，选中了一个位置就会消失。<br>Ctrl + Alt + F12 文件路径<br>Ctrl + Alt + Enter 光标所在行上空出一行，光标跳上<br>Ctrl + Alt + home 弹出跟当前文件有关联的文件目录(比如jsp 里面有导入几个js 和 css,这些文件就是关联文件)<br>Ctrl + Alt + ← 或 →  退回/前进到上一个操作的地方<br>Ctrl + Alt + ↑ 或 ↓ 在 Find 模式下，挑到上/下个查找的文件<br>Ctrl + Alt + 空格 类名或接口名提示(可能会和输入法快捷键冲突)</p>
+<p>==Ctrl+Shift==</p>
+<p>Ctrl + Shift + A Find Action<br>Ctrl + Shift + B 变量类型声明<br>Ctrl + Shift + C 复制当前文件磁盘路径到剪贴板<br>Ctrl + Shift + E 最近更改的文件<br>Ctrl + Shift + F 全局查找文件（通过某个词，指定要搜索的文件类型，目录。注意：这个也可能会和 Windows 的简繁切换快捷键相冲突哟！！！）<br>Ctrl + Shift + I 在方法名或是类名下，按此快捷键显示该方法或是类的源码结构，无需点击进去查看源码（当然了，必须是你已经导入源码的情况下才看得到）<br>Ctrl + Shift + J 自动将下一行合并到当前行末尾<br>Ctrl + Shift + K git push<br>Ctrl + Shift + M 光标位置在括号前后切换<br>Ctrl + Shift + N 通过输入文件名和行号（可以输入部分名称，支持模糊）来定位查找文件<br>Double + Shift (快速双击 Shift)搜索最近打开的文件，我也是经常误触才发现他这个功能<br>Ctrl + Shift + P 表达式的类型信息<br>Ctrl + Shift + R 搜索指定范围文件，替换文字<br>Ctrl + Shift + T 如果在常规类下按它，弹出已写好的，可选择的对应 Test 类，如果在该 Test 类下按它，则直接回到源类。<br>Ctrl + Shift + U // 大/小写都是这个快捷键<br>Ctrl + Shift + V 粘贴最近复制过的一些信息（从历史记录粘贴）<br>Ctrl + Shift + W Ctrl + W 的逆向操作<br>Ctrl + Shift + Y Code With Me<br>Ctrl + Shift + Z 取消撤销（恢复上一次操作）<br>Ctrl + Shift + F7 高亮显示所有该选中文本，按 Esc 高亮消失。<br>Ctrl + Shift + F8 查看断点<br>Ctrl + Shift + F12 编辑器全屏<br>Ctrl + Shift + Del 删除环绕的标签<br>Ctrl + Shift + 1，2，3… 快速添加书签<br>Ctrl + Shift + Space 自动补全代码（智能提示）<br>Ctrl + Shift + Enter 自动给末尾加;完成代码<br>Ctrl + Shift + ↑ 或 ↓ 移动光标所在 statement 域移动到上/下 (Alt + Shift + ↑ 或 ↓ 移动光标所在行到上/下)<br>Ctrl + Shift + [ 或 ] 选中从光标所在位置到它的父级区域(界面上层导航可能更开)<br>Ctrl + Shift + 小键盘 + 或 – 折叠/展开所有代码<br>Ctrl + Shift + ← 或 →  选中临边左/右的单词或是符号<br>Ctrl + Shift + / 块注释（使用 =begin block =end 进行注释）<br>Ctrl + Shift + Backspace(退格)  回到上次修改的地方(跟 Ctrl+Alt+左右方向键不一样的地方是，只回退到修改的地方，而不是过去光标放的地方)</p>
+<p>==Alt+Shift==</p>
+<p>Alt + Shfit + B 查看当前行对应的 commit 提交记录详情<br>Alt + Shift + C 查看最近操作项目的变化情况列表(在版本控制下，显示比较缓慢)<br>Alt + Shift + F 添加到收藏夹<br>Alt + Shift + G 进入多行选取模式并将光标放在所选行的末尾(简单理解就是，选中多行之后使用这个快捷键，你可以同时往这多行末尾添加相同的内容，感觉和列模式有些像，但列模式不同行的光标都在同一列，这块不同行的光标可以不在同一列 —— 都在各自行的末尾)<br>Alt + Shift + J 取消选中（有点像 Ctrl + Alt + Shift + J 的逆操作，不过 Alt + Shift + J 每次只取消选中一个地方）<br>Alt + Shift + L 加载上下文<br>Alt + Shift + N 添加任务<br>Alt + Shift + S 保存上下文<br>Alt + Shift + T 切换任务<br>Alt + Shift + U 驼峰命名法和蛇形命名法切换(需要先选中方法名对应的字符串)<br>Alt + Shift + W 关闭活跃任务<br>Alt + Shift + X 清理上下文<br>Alt + Shift + F9  弹出debug 运行菜单，提供选择性debug 哪个(这个需要自己尝试下，按后会有弹出框，记得查看)<br>Alt + Shift + F10 弹出run 菜单，提供选择性run 哪个(这个需要自己尝试下，按后会有弹出框，记得查看)<br>Alt + Shift + ↑ 或 ↓ 移动光标所在行到上/下<br>Alt + Shift + Insert 切换到列选择模式（再次可切换回行选择模式）<br>Alt + Shift + 鼠标左键单击不放,拖动 可以直接方块区域选择（也叫列选或块选，批量修改列的时候很有用）</p>
+<p>==Ctrl+Alt+Shift==  （用得不多，因为总感觉手指头不太够用）</p>
+<p>Ctrl + Alt + Shift + C 复制参考信息(方法的继承关系，或文件相对路径及当前所在行号)<br>Ctrl + Alt + Shift + D 以 UML 的形式显示改动<br>Ctrl + Alt + Shift + L 格式化文件<br>Ctrl + Alt + Shift + J 选中所有用到当前方法的地方（这个用来统一修改函数名和调用点函数名之类的很有用，就不用单独一个个去修改了）<br>Ctrl + Alt + Shift + N 查找类中的方法或变量<br>Ctrl + Alt + Shift + T 选择重构方式<br>Ctrl + Alt + Shift + V 不带格式的简单黏贴<br>Ctrl + Alt + Shift + X Deployment -&gt; Upload to (上传文件改动到指定服务器，对于将本地文件改动快速同步到远端服务器的时候很好用)<br>Ctrl + Alt + Shift + F7 Find Usages Settings<br>Ctrl + Alt + Shift + F8 添加临时行断点</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="JetBrains" target="_blank" rel="external">https://leolichenxi.github.io/2023/12/22/Tools/JetBrains%E5%BF%AB%E6%8D%B7%E9%94%AE/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/leolichenxi" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/leolichenxi" target="_blank"><span class="text-dark">李晨曦</span><small class="ml-1x">Game Developer &amp; U3D,UE4</small></a></h3>
+        <div>Game Developer &amp; U3D,UE4</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+       
+
+
+    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2023/12/22/Tools/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="VSCode"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2023/12/22/Shell/adb/" title="adb常用命令记录">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+  </div>
+  
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
+            </div>
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.jpg">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/leolichenxi" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span >本站总访问量: <span id="busuanzi_value_site_pv"></span>次</span>
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+    
+    
+        
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '2kLH6P3hQG2bNQQ9a9mwRFmd-gzGzoHsz',
+  appKey: 'EoQxJozBVF2GC2gAplgVX0CA'
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+    
+    
+        
+    
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: 'JetBrains', 
+  owner: 'leolichenxi', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'leolichenxi.github.io',
+  oauth: {
+    client_id: 'c03e854f9bffe2bd61c6',
+    client_secret: 'f41ada16ace07ee2c4669395100e4e9668fe5193',
+  }
+})
+gitment.render('comments')
+</script>
+
+    
+
+    
+    
+
+
+
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
