@@ -6,7 +6,7 @@
   <link href="https://leolichenxi.github.io/atom.xml" rel="self"/>
   
   <link href="https://leolichenxi.github.io/"/>
-  <updated>2023-01-05T07:33:07.377Z</updated>
+  <updated>2023-08-17T03:59:39.272Z</updated>
   <id>https://leolichenxi.github.io/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/08/17/U3D/VertexStreamSplitting/"/>
+    <id>https://leolichenxi.github.io/2023/08/17/U3D/VertexStreamSplitting/</id>
+    <published>2023-08-17T03:57:38.904Z</published>
+    <updated>2023-08-17T03:59:39.272Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于使用VertexStreamSplitting优化带宽<br>方案介绍<br>Tile-based GPUs create a shader that calculates the normalized device coordinates based on the provided vertex shader to do binning. It is executed first on every vertex in the scene, whether visible or not. Keeping vertex position data contiguous in memory is therefore a big plus. Other places this vertex stream layout can be beneficial is for shadow passes, as usually you only need position data for shadow calculations, as well as depth prepasses, which is a technique usually used for console/desktop rendering; this vertex stream layout can be a win for multiple classes of the rendering engine!<br>Stream Splitting involves setting up the vertex buffer with a contiguous section of vertex position data and another section containing interleaved vertex attributes. Most applications usually set up their buffers fully interleaving all attributes. This visual explains the difference:</p><p>Looking at how the GPU fetches vertex data helps us understand the benefits of stream splitting. Assuming for the sake of argument:<br>●32 byte cache lines (a pretty common size)<br>●Vertex format consisting of:Position, vec3<float32> = 12 bytes<br>○Normal vec3<float32> = 12 bytes<br>○UV coordinates vec2<float32> = 8 bytes<br>○Total size = 32 bytes<br>When the GPU fetches data from memory for binning, it will pull a 32-byte cache line to operate on. Without vertex stream splitting, it will only actually use the first 12 bytes of this cache line for binning, and discard the other 20 bytes as it fetches the next vertex. With vertex stream splitting, the vertex positions will be contiguous in memory, so when that 32-byte chunk is pulled into cache, it will actually contain 2 whole vertex positions to operate on before having to go back to main memory to fetch more, a 2x improvement!<br>Now, if we combine the vertex stream splitting with vertex compression, we will reduce the size of a single vertex position down to 6 bytes, so a single 32-byte cache line pulled from system memory will have 5 whole vertex positions to operate on, a 5x improvement!<br>原文链接    <a href="https://developer.android.com/games/optimize/vertex-data-management#vertex_stream_splitting">https://developer.android.com/games/optimize/vertex-data-management#vertex_stream_splitting</a></float32></float32></float32></p><p>摘要：更改顶点缓存布局，将Position与其他的顶点属性分开处理，使Position属性的内存分布变得连续，从而提高cache命中率，降低带宽与性能开销，配合Vertex Compression 使用，效率会更高</p><p>unity当中实现也比较简单，将顶点属性分配到不同的stream中，unity支持4个stream，我们这边用2个就可以了，在工具导出fbx的mesh时为新生成的mesh设置下即可</p><p>测试数据<br>Device：黑鲨 3Pro   GPU:Adreno (TM) 650<br>测试环境：一定数量的玩家主城白模，顶点数约 45w   FPS：30 </p><p>Bandwidth(Bytes/Second)</p><p>Original Mesh：R + W  ≈  1.75g<br>Vertex Stream Splitting Mesh：R + W  ≈  1.35g<br>带宽降低约400M，主要来自Read带宽</p><p>VertexMemoryRead(Bytes/Second)</p><p>VertexMemoryRead相差约400M， 对比上一条，可见降低的Read带宽均为VertexMemory</p><p>Avg(% Stalled on System Memory)</p><p>可以看到StalledOnSystemMemory的百分比下降明显，原因是cache命中率的提高，大大降低了system memory的读取</p><p>附录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">private static readonly VertexAttributeDescriptor[] vertexAttributeDescriptorList = new[]&#123;</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3,0),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.Normal, VertexAttributeFormat.Float32, 3,1),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.Tangent, VertexAttributeFormat.Float32, 4,1),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.Color, VertexAttributeFormat.Float32, 4,1),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.TexCoord0, VertexAttributeFormat.Float32, 2,1),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.TexCoord1, VertexAttributeFormat.Float32, 2,1),</span><br><span class="line">     new VertexAttributeDescriptor(VertexAttribute.TexCoord2, VertexAttributeFormat.Float32, 4,1)</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> private static Mesh CreateMeshFrom(Mesh mesh)</span><br><span class="line"> &#123;</span><br><span class="line">     Mesh mesh1 = Object.Instantiate(mesh);</span><br><span class="line">      </span><br><span class="line">     //顶点属性分流</span><br><span class="line"></span><br><span class="line">     //设置顶点属性</span><br><span class="line">     int vertexCount = mesh.vertexCount;</span><br><span class="line">     mesh1.SetVertexBufferParams(vertexCount,vertexAttributeDescriptorList);</span><br><span class="line">     return mesh1;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;关于使用VertexStreamSplitting优化带宽&lt;br&gt;方案介绍&lt;br&gt;Tile-based GPUs create a shader that calculates the normalized device coordinates based on the p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/05/22/U3D/DrawIntstance/DrawInstance%E8%AE%B0%E5%BD%95/"/>
+    <id>https://leolichenxi.github.io/2023/05/22/U3D/DrawIntstance/DrawInstance%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-05-22T02:44:08.466Z</published>
+    <updated>2023-05-22T02:44:45.878Z</updated>
+    
+    <content type="html"><![CDATA[<p>Graphics.DrawMeshInstanced<br>Graphics.DrawMeshInstancedIndirect</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Graphics.DrawMeshInstanced&lt;br&gt;Graphics.DrawMeshInstancedIndirect&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/03/21/U3D/ECS/Unity%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>https://leolichenxi.github.io/2023/03/21/U3D/ECS/Unity%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
+    <published>2023-03-21T02:33:11.168Z</published>
+    <updated>2023-03-27T08:30:12.804Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h1><h2 id="理解篇"><a href="#理解篇" class="headerlink" title="理解篇"></a>理解篇</h2><p>一般游戏的性能指标有:帧率、稳定性、流畅性、加载时间(loading)、内存占用、安装包大小、网络延迟、耗电量等。</p><h2 id="帧率-流畅性"><a href="#帧率-流畅性" class="headerlink" title="帧率-流畅性"></a>帧率-流畅性</h2><p>FPS低：基本每一帧耗时都较长<br>卡顿： 某一帧或几帧耗时较高</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h1&gt;&lt;h2 id=&quot;理解篇&quot;&gt;&lt;a href=&quot;#理解篇&quot; class=&quot;headerlink&quot; title=&quot;理解篇&quot;&gt;&lt;/a&gt;理解</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://leolichenxi.github.io/2023/03/21/U3D/ECS/SLG%E5%A4%A7%E4%B8%96%E7%95%8C%E4%BC%98%E5%8C%96/"/>
+    <id>https://leolichenxi.github.io/2023/03/21/U3D/ECS/SLG%E5%A4%A7%E4%B8%96%E7%95%8C%E4%BC%98%E5%8C%96/</id>
+    <published>2023-03-21T02:32:40.624Z</published>
+    <updated>2023-03-21T06:05:00.684Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SLG大世界方案"><a href="#SLG大世界方案" class="headerlink" title="SLG大世界方案"></a>SLG大世界方案</h1><p>[toc]</p><h1 id="基本方案选型"><a href="#基本方案选型" class="headerlink" title="基本方案选型"></a>基本方案选型</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;SLG大世界方案&quot;&gt;&lt;a href=&quot;#SLG大世界方案&quot; class=&quot;headerlink&quot; title=&quot;SLG大世界方案&quot;&gt;&lt;/a&gt;SLG大世界方案&lt;/h1&gt;&lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1 id=&quot;基本方案选型&quot;&gt;&lt;a href=&quot;#基本方案选型&quot; cl</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -155,6 +237,30 @@
     
     
     <category term="Charp Lua" scheme="https://leolichenxi.github.io/tags/Charp-Lua/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CMake</title>
+    <link href="https://leolichenxi.github.io/2021/06/17/Tools/Cmake/"/>
+    <id>https://leolichenxi.github.io/2021/06/17/Tools/Cmake/</id>
+    <published>2021-06-17T04:00:00.000Z</published>
+    <updated>2023-06-13T02:38:55.325Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CMAKE-使用"><a href="#CMAKE-使用" class="headerlink" title="CMAKE 使用"></a>CMAKE 使用</h1><p>考虑到在项目中定义Native库和编译其它的开源Native库，客户端往往对编译原理计算机基础比较薄弱，记录下CMake使用笔记</p><p>主要从官网记录</p><p><a href="https://cmake.org/">CMake官网</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CMAKE-使用&quot;&gt;&lt;a href=&quot;#CMAKE-使用&quot; class=&quot;headerlink&quot; title=&quot;CMAKE 使用&quot;&gt;&lt;/a&gt;CMAKE 使用&lt;/h1&gt;&lt;p&gt;考虑到在项目中定义Native库和编译其它的开源Native库，客户端往往对编译原理计算机基</summary>
+      
+    
+    
+    
+    <category term="Tools" scheme="https://leolichenxi.github.io/categories/Tools/"/>
+    
+    
+    <category term="CMake" scheme="https://leolichenxi.github.io/tags/CMake/"/>
     
   </entry>
   
@@ -361,128 +467,6 @@ Loa</summary>
     
     
     <category term="资源" scheme="https://leolichenxi.github.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lua 内存 和 GC</title>
-    <link href="https://leolichenxi.github.io/2021/06/14/Lua/lua%E5%86%85%E5%AD%98/"/>
-    <id>https://leolichenxi.github.io/2021/06/14/Lua/lua%E5%86%85%E5%AD%98/</id>
-    <published>2021-06-14T04:00:00.000Z</published>
-    <updated>2022-02-06T10:32:43.864Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><p>1 byte (B 字节) = 8 bits (b 比特位，0或1)<br>1 KB = 1024 (2^10) byte<br>1MB = 1024 KB<br>1GB = 1024 MB<br>1TB = 1024 GB<br>##</p><h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><ol><li>number 实数，可以是整数，浮点数</li><li>string 字符串，一旦赋值不能被修改，可以通过方法string.gsub()来修改</li><li>nil 全局变量没被赋值默认为nil，删除变量酒赋值为nil</li><li>boolean false 和 nil为假，其它都为真</li><li>function函数</li><li>table 数组，容器</li><li>userdata (类，其它语言转换过来就变成userdata类)</li><li>thread 线程</li></ol><h2 id="Lua-GC"><a href="#Lua-GC" class="headerlink" title="Lua GC"></a>Lua GC</h2><blockquote><p>在Lua5.1后，lua采用分布回收以及三色增量标记清除算法，基本原里：</p></blockquote><ul><li>每个新创建的对象设置为白色</li><li>遍历root节点中引用的对象，从白色置为灰色，并且放入到灰色节点链表中</li><li>从灰色链表中取未扫描到的对象，将其置为黑色，遍历这个对象关联的其他所有对象：如果为白色，则标记为灰色并加入到灰色链表中</li><li>遍历所有对象，如果是白色，执行灰色，否则塞入到对象链表中，等待下一轮GC</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;1 byte (B 字节) = 8 bits (b 比特位，0或1)&lt;br&gt;1 KB = 1024 (2^10) byte&lt;br&gt;1MB = 1024 KB&lt;br&gt;1G</summary>
-      
-    
-    
-    
-    <category term="lua" scheme="https://leolichenxi.github.io/categories/lua/"/>
-    
-    
-    <category term="lua" scheme="https://leolichenxi.github.io/tags/lua/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ADB调试</title>
-    <link href="https://leolichenxi.github.io/2021/06/14/U3D/ADB%E8%B0%83%E8%AF%95/"/>
-    <id>https://leolichenxi.github.io/2021/06/14/U3D/ADB%E8%B0%83%E8%AF%95/</id>
-    <published>2021-06-14T04:00:00.000Z</published>
-    <updated>2022-02-21T11:10:56.849Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="adb-链接设备"><a href="#adb-链接设备" class="headerlink" title="adb 链接设备"></a>adb 链接设备</h2><p>adb connect 127.0.0.1:62001</p><h2 id="查看设备链接"><a href="#查看设备链接" class="headerlink" title="查看设备链接"></a>查看设备链接</h2><p>adb devices</p><h2 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h2><p>adb shell top | grep app_name<br>adb shell top | grep com.bilibili.hcshjxaz</p><h2 id="链接Unity"><a href="#链接Unity" class="headerlink" title="链接Unity"></a>链接Unity</h2><p>adb forward tcp:34999 localabstract:包名</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;adb-链接设备&quot;&gt;&lt;a href=&quot;#adb-链接设备&quot; class=&quot;headerlink&quot; title=&quot;adb 链接设备&quot;&gt;&lt;/a&gt;adb 链接设备&lt;/h2&gt;&lt;p&gt;adb connect 127.0.0.1:62001&lt;/p&gt;
-&lt;h2 id=&quot;查看设备链接</summary>
-      
-    
-    
-    
-    <category term="U3D" scheme="https://leolichenxi.github.io/categories/U3D/"/>
-    
-    
-    <category term="工具" scheme="https://leolichenxi.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AssetBundle优化</title>
-    <link href="https://leolichenxi.github.io/2021/06/14/U3D/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/Assetbundle%E4%BC%98%E5%8C%96/"/>
-    <id>https://leolichenxi.github.io/2021/06/14/U3D/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/Assetbundle%E4%BC%98%E5%8C%96/</id>
-    <published>2021-06-14T04:00:00.000Z</published>
-    <updated>2022-02-21T11:08:03.545Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><p>1.一.BuildAssetBundleOption.DisableWriteTypeTree 关闭</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;1.一.BuildAssetBundleOption.DisableWriteTypeTree 关闭&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="U3D" scheme="https://leolichenxi.github.io/categories/U3D/"/>
-    
-    
-    <category term="资源" scheme="https://leolichenxi.github.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cmd-常用命令</title>
-    <link href="https://leolichenxi.github.io/2021/06/14/Shell/cmd/"/>
-    <id>https://leolichenxi.github.io/2021/06/14/Shell/cmd/</id>
-    <published>2021-06-14T04:00:00.000Z</published>
-    <updated>2023-01-05T07:32:16.529Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="ipconfig-flushdns"><a href="#ipconfig-flushdns" class="headerlink" title="ipconfig /flushdns"></a>ipconfig /flushdns</h3><h3 id="ipconfig"><a href="#ipconfig" class="headerlink" title="ipconfig"></a>ipconfig</h3><h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;ipconfig-flushdns&quot;&gt;&lt;a href=&quot;#ipconfig-flushdns&quot; class=&quot;headerlink&quot; title=&quot;ipconfig /flushdns&quot;&gt;&lt;/a&gt;ipconfig /flushdns&lt;/h3&gt;&lt;h3 id=&quot;ipc</summary>
-      
-    
-    
-    
-    <category term="shell" scheme="https://leolichenxi.github.io/categories/shell/"/>
-    
-    
-    <category term="shell" scheme="https://leolichenxi.github.io/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Pure主题设置记录</title>
-    <link href="https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://leolichenxi.github.io/2021/06/11/Hexo/Hexo-Pure-%E8%AE%BE%E7%BD%AE/</id>
-    <published>2021-06-11T05:43:00.000Z</published>
-    <updated>2023-01-05T07:29:39.582Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Pure-设置记录"><a href="#Pure-设置记录" class="headerlink" title="Pure 设置记录"></a>Pure 设置记录</h1><p>hexo-theme-pure git文档地址：<br><a href="https://github.com/cofess/hexo-theme-pure/blob/master/README.cn.md">文档地址</a></p><h3 id="背景动态设置"><a href="#背景动态设置" class="headerlink" title="背景动态设置"></a>背景动态设置</h3><p><a href="https://link.csdn.net/?target=https://github.com/hustcc/canvas-nest.js">背景动画</a> 基于canvas，在\themes\pure\layout\layout.ejs的body中面添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="gitcommet-设置"><a href="#gitcommet-设置" class="headerlink" title="gitcommet 设置"></a>gitcommet 设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  type: gitment  # 启用哪种评论系统</span><br><span class="line">  # disqus:  # enter disqus shortname here</span><br><span class="line">  # youyan: </span><br><span class="line">  #   uid: 2kLH6P3hQG2bNQQ9a9mwRFmd-gzGzoHsz # enter youyan uid </span><br><span class="line">  # livere:</span><br><span class="line">  #   uid: # enter youyan uid </span><br><span class="line">  gitment:</span><br><span class="line">    githubID: githubname</span><br><span class="line">    repo: githubname.github.io</span><br><span class="line">    ClientID: id</span><br><span class="line">    ClientSecret: secrectid</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure><h3 id="访问数设置"><a href="#访问数设置" class="headerlink" title="访问数设置"></a>访问数设置</h3><p>footer.ejs脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class=&quot;footer&quot; itemscope itemtype=&quot;http://schema.org/WPFooter&quot;&gt;</span><br><span class="line">&lt;%- partial(&#x27;_common/social&#x27;, null, &#123;cache: !config.relative_link&#125;) %&gt;</span><br><span class="line">    &lt;div class=&quot;copyright&quot;&gt;</span><br><span class="line">    &lt;% if(theme.site.copyright) &#123; %&gt;</span><br><span class="line">        &amp;copy; &lt;%= date(new Date(), &#x27;YYYY&#x27;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;span &gt;本站总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Pure-设置记录&quot;&gt;&lt;a href=&quot;#Pure-设置记录&quot; class=&quot;headerlink&quot; title=&quot;Pure 设置记录&quot;&gt;&lt;/a&gt;Pure 设置记录&lt;/h1&gt;&lt;p&gt;hexo-theme-pure git文档地址：&lt;br&gt;&lt;a href=&quot;https</summary>
-      
-    
-    
-    
-    <category term="Hexo" scheme="https://leolichenxi.github.io/categories/Hexo/"/>
-    
-    
-    <category term="pure" scheme="https://leolichenxi.github.io/tags/pure/"/>
     
   </entry>
   

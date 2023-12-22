@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://leolichenxi.github.io/2021/06/14/Tools/JetBrains%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2023-12-22</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2023/08/17/U3D/VertexStreamSplitting/</loc>
+    <lastmod>2023-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2021/06/14/U3D/Impostors/</loc>
+    <lastmod>2023-06-13</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2021/06/17/Tools/Cmake/</loc>
+    <lastmod>2023-06-13</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2021/06/14/%E4%BB%A3%E7%A0%81%E7%AF%87/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <lastmod>2023-06-13</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2023/05/22/U3D/DrawIntstance/DrawInstance%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2023-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2023/03/21/U3D/ECS/Unity%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2023-03-27</lastmod>
+  </url>
+  <url>
+    <loc>https://leolichenxi.github.io/2023/03/21/U3D/ECS/SLG%E5%A4%A7%E4%B8%96%E7%95%8C%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2023-03-21</lastmod>
+  </url>
+  <url>
     <loc>https://leolichenxi.github.io/2021/08/30/U3D/ECS/AndroidCrash/</loc>
     <lastmod>2023-03-16</lastmod>
   </url>
